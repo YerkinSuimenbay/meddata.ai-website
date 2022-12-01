@@ -1,6 +1,6 @@
 import { ElementType, lazy, Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Box, CircularProgress } from "@mui/material";
+import Circle from "./components/loaders/Circle/Circle";
 // import { Home } from "./pages/home/Home";
 
 function Router() {
@@ -17,19 +17,12 @@ function Router() {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Loadable = (Component: ElementType) => (props: any) =>
   (
-    <Suspense
-      fallback={
-        <Box p={2} textAlign="center">
-          <CircularProgress />
-        </Box>
-      }
-    >
+    <Suspense fallback={<Circle />}>
       <Component {...props} />
     </Suspense>
   );
 
 // const NotFound = Loadable(lazy(() => import("./pages/Page404")));
-const Home = Loadable(lazy(() => import("./pages/home/Home")));
-
+const Home = Loadable(lazy(() => import("./pages/main/Main")));
 
 export default Router;

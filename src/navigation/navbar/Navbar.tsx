@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.scss";
 import logo from "../../assets/images/logo-meddata.svg";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 const links = [
   {
@@ -21,12 +23,23 @@ const links = [
   },
   {
     path: "/careers",
-    label: "Career",
-    name: "career",
+    label: "Careers",
+    name: "careers",
   },
 ];
 
 export const Navbar: React.FC = () => {
+  const { t, i18n } = useTranslation(["common"], { keyPrefix: "navbar" });
+
+  useEffect(() => {
+    const lng = localStorage.getItem("i18nextLng");
+
+    // IF THE LANG ANYTHING BUT en ru kz
+    if (lng && lng.length > 2) {
+      i18next.changeLanguage("en");
+    }
+  }, []);
+
   return (
     <div className="navbar-container">
       <div className="navbar">
@@ -44,7 +57,9 @@ export const Navbar: React.FC = () => {
                 isActive ? "active_link" : undefined
               }
             >
-              {link.label}
+              {/* {link.label} */}
+              {t(link.name)}
+              {/* {t("test")} */}
             </NavLink>
           ))}
         </div>

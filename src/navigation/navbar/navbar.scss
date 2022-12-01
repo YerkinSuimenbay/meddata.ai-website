@@ -29,6 +29,7 @@
 
   &__right {
     display: flex;
+    gap: 10px;
     // gap: 1rem;
     // column-gap: 101px;
     justify-content: space-between;
@@ -39,6 +40,7 @@
 
     a {
       transition: all 0.1s linear;
+      white-space: nowrap;
       &:hover {
         color: #adadad;
       }

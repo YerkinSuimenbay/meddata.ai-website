@@ -1,0 +1,119 @@
+@import "../../styles/constants";
+
+.home__page {
+  //   background-color: red;
+  //   width: 100vw;
+  //   height: 100vh;
+}
+
+.section__one {
+  width: 100%;
+  height: calc(100vh - #{$navbar_height});
+  background-color: gray;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../../assets/images/MedData1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 180px;
+  }
+
+  &__left {
+    color: #fff;
+    padding-right: 42px;
+    margin-right: 42px;
+    border-right: 2px solid;
+    text-align: center;
+  }
+
+  &__right {
+    color: #fcfcfc;
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.section__two {
+  padding: 100px 0;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 50%;
+  }
+
+  &__slogan {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__bottom-text {
+    color: #fcfcfc;
+    font-weight: 700;
+    background: $color_blue_dark;
+    box-shadow: -31px 31px 62px rgba(209, 217, 230, 0.2),
+      31px -31px 62px rgba(209, 217, 230, 0.2),
+      -31px -31px 62px rgba(255, 255, 255, 0.9),
+      31px 31px 78px rgba(209, 217, 230, 0.9),
+      inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+      inset -1px -1px 2px rgba(209, 217, 230, 0.5);
+    border-radius: 60.5535px;
+    width: fit-content;
+    padding: 12px 50px;
+  }
+}
+
+.section__three {
+  &__header {
+    color: $color_blue_dark;
+    font-weight: 700;
+    text-align: center;
+
+    &__blue {
+      color: $color_blue_light;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    row-gap: 40px;
+    column-gap: 32px;
+    align-items: center;
+    grid-template-columns: 400px 400px;
+    // grid-template-areas:
+    //   "topLeft topRight"
+    //   "bottomLeft bottomRight";
+
+    // align-items: stretch;
+    justify-items: stretch;
+    justify-content: center;
+    margin: 50px 0;
+
+    // & > div {
+    // justify-self: stretch;
+    // }
+
+    // .topLeft {
+    //   grid-area: topLeft;
+    // }
+    // .topRight {
+    //   grid-area: topRight;
+    // }
+    // .bottomLeft {
+    //   grid-area: bottomLeft;
+    // }
+    // .bottomRight {
+    //   grid-area: bottomRight;
+    // }
+  }
+}
