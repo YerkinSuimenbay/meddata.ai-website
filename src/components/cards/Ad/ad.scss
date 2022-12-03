@@ -1,0 +1,42 @@
+@import "../../../styles/constants";
+
+.ad {
+  // position: relative;
+  // width: $width_section;
+  background: #017bfe;
+  box-shadow: -31px 31px 62px rgba(209, 217, 230, 0.2),
+    31px -31px 62px rgba(209, 217, 230, 0.2), -31px -31px 62px #ffffff,
+    31px 31px 78px rgba(209, 217, 230, 0.9),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.8),
+    inset -1px -1px 2px rgba(174, 174, 176, 0.5);
+  border-radius: $border_radius;
+  padding: $padding_card;
+
+  &__top-button {
+    background-color: #fcfcfc;
+    padding: 0.5em 1em;
+    width: fit-content;
+    border-radius: 5px;
+  }
+
+  &__title {
+    font-size: $header_size;
+    font-weight: $header_weight;
+    color: #fff;
+    margin: 0.5em 0;
+  }
+
+  &__text {
+    color: #fff;
+    margin-bottom: 1em;
+  }
+
+  &__bottom-button {
+    background-color: #ecf0f2;
+    color: $color_blue_dark;
+    padding: 0.3em 1em;
+    border-radius: $border_radius;
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+}

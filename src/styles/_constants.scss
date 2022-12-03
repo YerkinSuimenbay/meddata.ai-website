@@ -1,14 +1,23 @@
 $max-width: 1020px;
 $width: 90%;
+$width_section: 71%;
+
+$header_size: 3em;
+$header_weight: 800;
 
 $navbar_color: #222222;
 $navbar_height: 70px;
 
 $color_white_secondary: #fcfcfc;
 $color_blue_dark: #1b294a;
+$color_blue_1: #239ffb;
 $color_blue_light: #017bfe;
 
 $border_radius: 15px;
+
+$zIndex_navbar: 10;
+
+$padding_card: 3rem 2rem;
 
 // FONTS
 @font-face {

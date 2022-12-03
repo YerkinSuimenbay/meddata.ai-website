@@ -1,0 +1,49 @@
+$w1: 90vw;
+$coord1: -($w1/3);
+$w2: 75vw;
+$coord2: $coord1 + ($w1 - $w2)/2;
+$w3: 60vw;
+$coord3: $coord2 + ($w2 - $w3)/2;
+
+// $w1: 20vw;
+// $coord1: -($w1/3);
+// $w2: 15vw;
+// $coord2: $coord1 + ($w1 - $w2)/2;
+// $w3: 10vw;
+// $coord3: $coord2 + ($w2 - $w3)/2;
+
+.ripple {
+  & > div {
+    border-radius: 50%;
+    background-color: #fcfcfc;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 81.5316px rgba(209, 217, 230, 0.58);
+  }
+
+  // position: relative;
+  .circle1 {
+    top: $coord1;
+    // left: $coord1;
+    width: $w1;
+    height: $w1;
+  }
+
+  .circle2 {
+    top: $coord2;
+    // left: $coord2;
+    width: $w2;
+    height: $w2;
+  }
+
+  .circle3 {
+    top: $coord3;
+    // left: $coord3;
+    width: $w3;
+    height: $w3;
+  }
+}

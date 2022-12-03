@@ -5,14 +5,12 @@ interface IProps {
   textBadge?: string;
   className?: string;
   children: React.ReactNode;
-  alignItems?: "center" | "flex-start";
 }
 
 const CardWithBadge: React.FC<IProps> = ({
   textBadge,
   className,
   children,
-  alignItems = "flex-start",
 }) => {
   return (
     <div
@@ -21,9 +19,7 @@ const CardWithBadge: React.FC<IProps> = ({
       }
     >
       {textBadge && <div className="cardWithBadge__badge">{textBadge}</div>}
-      <div className="card__content" style={{ alignItems }}>
-        {children}
-      </div>
+      <div className="card__content">{children}</div>
     </div>
   );
 };

@@ -1,0 +1,20 @@
+@import "../../../styles/constants";
+
+.list {
+  &__title {
+    color: $color_blue_dark;
+    font-weight: 700;
+  }
+
+  &__items {
+    padding-left: 1rem;
+    // display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}

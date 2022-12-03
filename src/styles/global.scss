@@ -29,6 +29,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-family: Gilroy;
   font-size: 1.6rem;
+  // font-size: 2rem;
 }
 
 a {
@@ -80,4 +81,8 @@ h5 {
     width: inherit;
     height: inherit;
   }
+}
+
+b {
+  color: $color_blue_dark;
 }

@@ -1,0 +1,17 @@
+@import "../../../styles/constants";
+
+.getConsultationBtn {
+  color: #fff;
+  background: #1b294a;
+  box-shadow: -31px 31px 62px rgba(209, 217, 230, 0.2),
+    31px -31px 62px rgba(209, 217, 230, 0.2),
+    -31px -31px 62px rgba(255, 255, 255, 0.9),
+    31px 31px 78px rgba(209, 217, 230, 0.9),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+    inset -1px -1px 2px rgba(209, 217, 230, 0.5);
+  padding: 0.3em 1em;
+  border-radius: $border_radius;
+  font-size: 1.4em;
+  font-weight: 500;
+  margin: 0 auto;
+}

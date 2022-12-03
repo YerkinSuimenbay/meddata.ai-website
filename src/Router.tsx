@@ -23,6 +23,6 @@ const Loadable = (Component: ElementType) => (props: any) =>
   );
 
 // const NotFound = Loadable(lazy(() => import("./pages/Page404")));
-const Home = Loadable(lazy(() => import("./pages/main/Main")));
+const Home = Loadable(lazy(() => import("./pages/Main/Main")));
 
 export default Router;

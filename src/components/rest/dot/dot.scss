@@ -1,0 +1,12 @@
+@import "../../../styles/constants";
+
+$size: 0.3rem;
+
+.dot {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: $color_blue_dark;
+  display: inline-block;
+  vertical-align: middle;
+}
