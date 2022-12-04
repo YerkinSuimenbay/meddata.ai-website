@@ -19,11 +19,11 @@ const CustomList: React.FC<IList> = ({ title, type, items }) => {
     }
   };
   return (
-    <div className="list">
-      <p className="list__title">{title}</p>
-      <div className="list__items">
+    <div className="custionList">
+      <p className="custionList__title">{title}</p>
+      <div className="custionList__items">
         {items.map((item) => (
-          <div key={item} className="list__item">
+          <div key={item} className="custionList__item">
             {renderListStyle()}
             <p>{item}</p>
           </div>

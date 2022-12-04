@@ -169,6 +169,11 @@
 
   &__middle {
     display: flex;
+
+    &__right {
+      width: 30em;
+      z-index: $zIndex_image;
+    }
   }
 
   &__cards {
@@ -260,5 +265,33 @@
     text-align: center;
     font-size: $header_size;
     font-weight: $header_weight;
+    margin-bottom: 1em;
+  }
+
+  &__news {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    column-gap: 1em;
+    row-gap: 1.5em;
+    align-items: flex-start;
+
+    .newsArticle__poster {
+      height: 150px;
+    }
+  }
+}
+
+.section__questions {
+  width: $width_section;
+  margin: 0 auto 5em;
+  &__header {
+    color: $color_blue_dark;
+    font-weight: 700;
+    text-align: center;
+    font-size: $header_size;
+    font-weight: $header_weight;
+    margin-bottom: 1em;
   }
 }
