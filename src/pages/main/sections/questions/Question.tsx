@@ -35,23 +35,6 @@ const Question: React.FC<IList> = ({ question, onClick }) => {
                 isDividerVisible={index + 1 < subquestions.length}
               />
             );
-            // const { id: subId, title: subTitle, answer } = subquestion;
-            // return (
-            //   <>
-            //     <div key={subId} className="subquestion">
-            //       <h1
-            //         className={`subquestion__title ${isOpen ? "open" : ""}`}
-            //         onClick={() => console.log("OPEN MODAL")}
-            //       >
-            //         {subId}. {subTitle}
-            //       </h1>
-            //     </div>
-            //     {index + 1 < subquestions.length && (
-            //       <hr className="subquestions__divider" />
-            //     )}
-            //   </>
-            // );
-            // return subquestion();
           })}
         </div>
       </div>

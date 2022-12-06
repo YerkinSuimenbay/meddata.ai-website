@@ -1,0 +1,24 @@
+@import "../../styles/constants";
+
+.careers__page {
+}
+
+.section__header__background {
+  background: linear-gradient(90deg, #157bd1 13.03%, #04d6ee 100.08%);
+  padding-top: 4em;
+}
+
+.section__header {
+  width: $width_section;
+  margin: 0 auto;
+  color: #fff;
+  display: flex;
+
+  //   align-items: center;
+
+  &__title {
+    margin-bottom: 2rem;
+    font-size: 2em;
+    font-weight: 700;
+  }
+}

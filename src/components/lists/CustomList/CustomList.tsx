@@ -1,5 +1,5 @@
 import React from "react";
-import Dot from "../../rest/dot/Dot";
+import Dot from "../../rest/Dot/Dot";
 import "./customList.scss";
 
 interface IList {

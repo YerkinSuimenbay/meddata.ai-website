@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "../../../../components/rest/modal/Modal";
 
 export interface ISubquestion {
   id: number;
@@ -16,17 +17,19 @@ const Subquestion: React.FC<IProps> = ({
   answer,
   isDividerVisible,
 }) => {
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleClick = () => setOpenModal(true);
+
   return (
     <React.Fragment>
       <div className="subquestion">
-        <h1
-          className="subquestion__title"
-          onClick={() => console.log("OPEN MODAL")}
-        >
-          {id}. {title}
+        <h1 className="subquestion__title" onClick={handleClick}>
+          {title}
         </h1>
       </div>
       {isDividerVisible && <hr className="subquestions__divider" />}
+      {openModal && <Modal onClick={() => setOpenModal(false)}>{answer}</Modal>}
     </React.Fragment>
   );
 };

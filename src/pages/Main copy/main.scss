@@ -1,0 +1,301 @@
+@import "../../styles/constants";
+
+.home__page {
+  //   background-color: red;
+  //   width: 100vw;
+  //   height: 100vh;
+  // section {
+  //   width: 70%;
+  //   margin: 0 auto;
+  // }
+}
+
+.section__one__background {
+  width: 100%;
+  height: calc(100vh - #{$navbar_height});
+  background-color: gray;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../../assets/images/MedData1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section__one {
+  width: $width_section;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 10em;
+  }
+
+  &__left {
+    color: #fff;
+    padding-right: 3em;
+    margin-right: 3em;
+    border-right: 2px solid;
+    text-align: center;
+  }
+
+  &__right {
+    color: #fcfcfc;
+    h1 {
+      font-size: 3em;
+      font-weight: 700;
+    }
+  }
+}
+
+.section__two {
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  img {
+    width: 50%;
+  }
+
+  &__slogan {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__bottom-text {
+    color: #fcfcfc;
+    font-weight: 700;
+    background: $color_blue_dark;
+    box-shadow: -31px 31px 62px rgba(209, 217, 230, 0.2),
+      31px -31px 62px rgba(209, 217, 230, 0.2),
+      -31px -31px 62px rgba(255, 255, 255, 0.9),
+      31px 31px 78px rgba(209, 217, 230, 0.9),
+      inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+      inset -1px -1px 2px rgba(209, 217, 230, 0.5);
+    border-radius: 60.5535px;
+    width: fit-content;
+    padding: 12px 50px;
+  }
+}
+
+.section__three {
+  width: $width_section;
+  margin: 0 auto 5em;
+  &__header {
+    color: $color_blue_dark;
+    font-weight: 700;
+    text-align: center;
+    font-size: $header_size;
+    font-weight: $header_weight;
+
+    &__blue {
+      color: $color_blue_light;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    row-gap: 40px;
+    align-items: center;
+    grid-template-columns: 48% 48%;
+    justify-items: stretch;
+    justify-content: space-between;
+    margin-top: 4em;
+
+    & > div {
+      width: 100%;
+    }
+  }
+}
+
+.section__four {
+  width: $width_section;
+  margin: 0 auto 5em;
+
+  &__header {
+    color: $color_blue_dark;
+    font-weight: 700;
+    text-align: center;
+    font-size: $header_size;
+    font-weight: $header_weight;
+
+    &__blue {
+      color: $color_blue_light;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+    margin: 4em 0;
+
+    & > div {
+      flex: 1;
+      display: grid;
+      row-gap: 1em;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.section__five {
+  width: $width_section;
+  margin: 0 auto 5em;
+}
+
+.section__six {
+  width: $width_section;
+  margin: 0 auto 5em;
+
+  &__header {
+    font-size: $header_size;
+    font-weight: $header_weight;
+    margin-bottom: 1em;
+
+    &__blue {
+      color: $color_blue_1;
+    }
+  }
+
+  &__middle {
+    display: flex;
+
+    &__right {
+      width: 30em;
+      z-index: $zIndex_image;
+    }
+  }
+
+  &__cards {
+    width: 60%;
+    display: grid;
+    row-gap: 1em;
+    margin-bottom: 1.5em;
+  }
+
+  &__card {
+    &__title {
+      font-weight: 600;
+    }
+  }
+
+  &__button {
+    color: #fff;
+    background: #1b294a;
+    box-shadow: -31px 31px 62px rgba(209, 217, 230, 0.2),
+      31px -31px 62px rgba(209, 217, 230, 0.2),
+      -31px -31px 62px rgba(255, 255, 255, 0.9),
+      31px 31px 78px rgba(209, 217, 230, 0.9),
+      inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+      inset -1px -1px 2px rgba(209, 217, 230, 0.5);
+    padding: 0.3em 1em;
+    border-radius: $border_radius;
+    font-size: 1.4em;
+    font-weight: 500;
+    margin: 0 auto;
+  }
+}
+
+.section__seven {
+  width: $width_section;
+  margin: 0 auto 5em;
+
+  &__header {
+    color: $color_blue_dark;
+    font-weight: 700;
+    text-align: center;
+    font-size: $header_size;
+    font-weight: $header_weight;
+
+    &__blue {
+      color: $color_blue_light;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1.5em;
+    margin: 4em 0;
+
+    & > div {
+      flex: 1;
+      display: grid;
+      row-gap: 1em;
+    }
+  }
+
+  &__card {
+    &__title {
+      font-weight: 600;
+    }
+  }
+}
+
+.section__eight {
+  width: $width_section;
+  margin: 0 auto 5em;
+  &__slogan {
+    margin: 1.5em 0;
+    h2 {
+      text-align: center;
+      font-size: $header_size;
+      font-weight: $header_weight;
+      color: $color_blue_dark;
+    }
+  }
+}
+
+.section__about {
+  width: $width_section;
+  margin: 0 auto 5em;
+  &__header {
+    color: $color_blue_dark;
+    font-weight: 700;
+    text-align: center;
+    font-size: $header_size;
+    font-weight: $header_weight;
+    margin-bottom: 1em;
+  }
+
+  &__news {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    column-gap: 1em;
+    row-gap: 1.5em;
+    align-items: flex-start;
+
+    .newsArticle__poster {
+      height: 150px;
+    }
+  }
+}
+
+.section__questions {
+  width: $width_section;
+  margin: 0 auto 5em;
+  border: 2px dashed $color_blue_dark;
+  padding: 2em;
+  border-radius: $border_radius;
+
+  &__header {
+    color: $color_blue_dark;
+    font-weight: 700;
+    text-align: center;
+    font-size: $header_size;
+    font-weight: $header_weight;
+    margin-bottom: 1em;
+  }
+}

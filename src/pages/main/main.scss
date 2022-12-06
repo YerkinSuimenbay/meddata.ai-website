@@ -286,6 +286,10 @@
 .section__questions {
   width: $width_section;
   margin: 0 auto 5em;
+  border: 2px dashed $color_blue_dark;
+  padding: 2em;
+  border-radius: $border_radius;
+
   &__header {
     color: $color_blue_dark;
     font-weight: 700;
