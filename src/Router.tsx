@@ -1,5 +1,5 @@
 import { ElementType, lazy, Suspense } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Circle from "./components/loaders/Circle/Circle";
 import Footer from "./layouts/Footer";
 // import { Home } from "./pages/home/Home";
@@ -9,9 +9,9 @@ function Router() {
     <Routes>
       <Route path="/" element={<Footer />}>
         <Route path="/" element={<Main />} />
-        <Route path="/about" element={<div>about</div>} />
-        <Route path="/news" element={<div>news</div>} />
-        <Route path="/careers" element={<Careers />} />
+        <Route path="/about" element={<About />} />
+        {/* <Route path="/news" element={<News />} /> */}
+        {/* <Route path="/careers" element={<Careers />} /> */}
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
@@ -28,7 +28,9 @@ const Loadable = (Component: ElementType) => (props: any) =>
 
 // const NotFound = Loadable(lazy(() => import("./pages/Page404")));
 const Main = Loadable(lazy(() => import("./pages/Main/Main")));
-const Careers = Loadable(lazy(() => import("./pages/Careers/Careers")));
+const About = Loadable(lazy(() => import("./pages/About/About")));
+// const Careers = Loadable(lazy(() => import("./pages/Careers/Careers")));
+// const News = Loadable(lazy(() => import("./pages/News/News")));
 const NotFound = Loadable(lazy(() => import("./pages/NotFound/NotFound")));
 
 export default Router;

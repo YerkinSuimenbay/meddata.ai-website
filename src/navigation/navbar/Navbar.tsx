@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.scss";
-import logo from "../../assets/images/logo-meddata.svg";
+import logoMeddata from "../../assets/images/logo-meddata.svg";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 
@@ -16,16 +16,16 @@ const links = [
     label: "About us",
     name: "about",
   },
-  {
-    path: "/news",
-    label: "News",
-    name: "news",
-  },
-  {
-    path: "/careers",
-    label: "Careers",
-    name: "careers",
-  },
+  // {
+  //   path: "/news",
+  //   label: "News",
+  //   name: "news",
+  // },
+  // {
+  //   path: "/careers",
+  //   label: "Careers",
+  //   name: "careers",
+  // },
 ];
 
 export const Navbar: React.FC = () => {
@@ -41,11 +41,11 @@ export const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <div className="navbar-container">
-      <div className="navbar">
+    <div className="navbar-background">
+      <div className="navbar container">
         <div className="navbar__left">
           <NavLink to="">
-            <img src={logo} alt="meddata logo" />
+            <img src={logoMeddata} alt="meddata logo" />
           </NavLink>
         </div>
         <div className="navbar__right">

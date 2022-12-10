@@ -1,6 +1,6 @@
 @import "../../styles/constants";
 
-.navbar-container {
+.navbar-background {
   background-color: $navbar_color;
   position: sticky;
   top: 0;
@@ -10,7 +10,7 @@
 
 .navbar {
   width: $width;
-  max-width: $max-width;
+  // max-width: $max-width;
   margin: 0 auto;
   display: flex;
   gap: 1rem;
@@ -30,11 +30,11 @@
 
   &__right {
     display: flex;
-    gap: 10px;
+    gap: 2em;
     // gap: 1rem;
     // column-gap: 101px;
     justify-content: space-between;
-    width: 50%;
+    // width: 50%;
     align-items: center;
     color: #fcfcfc;
     font-weight: 400;
