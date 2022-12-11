@@ -20,7 +20,7 @@ const Question: React.FC<IList> = ({ question, onClick }) => {
   return (
     <div key={id} className="question">
       <div className="question__title__container" onClick={() => onClick(id)}>
-        <h1 className="question__title">{title}</h1>
+        <h2 className="question__title">{title}</h2>
         <button className={`question__button ${isOpen ? "open" : ""}`}>
           <img src={plus} alt="plus sign" />
         </button>

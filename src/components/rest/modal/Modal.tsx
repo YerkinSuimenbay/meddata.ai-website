@@ -15,7 +15,7 @@ const Modal: React.FC<IProps> = ({ children, onClick }) => {
         <button className="modal__closeBtn" onClick={onClick}>
           <Plus />
         </button>
-        {children}
+        <div className="modal__content">{children}</div>
       </div>
     </div>
   );

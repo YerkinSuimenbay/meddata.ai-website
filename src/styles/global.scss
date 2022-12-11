@@ -1,3 +1,16 @@
+// Some common breakpoints for widths of devices:
+// 320px — 480px: Mobile devices
+// 481px — 768px: iPads, Tablets
+// 769px — 1024px: Small screens, laptops
+// 1025px — 1200px: Desktops, large screens
+// 1201px and more —  Extra large screens, TV
+
+// 600px: Mobile devices
+// 768px: iPads, Tablets
+// 992px: Small screens, laptops
+// 1200px: Desktops, large screens
+// 1201px and more —  Extra large screens, TV
+
 @import "./constants";
 
 *,
@@ -9,18 +22,18 @@
 }
 
 html {
-  font-size: 12px;
+  font-size: 8px;
 }
-@media screen and (max-width: 1599px) {
-  html {
-    font-size: 9px;
-  }
-}
-@media screen and (max-width: 1366px) {
-  html {
-    font-size: 8px;
-  }
-}
+// @media screen and (max-width: 1599px) {
+//   html {
+//     font-size: 9px;
+//   }
+// }
+// @media screen and (max-width: 1366px) {
+//   html {
+//     font-size: 8px;
+//   }
+// }
 
 body {
   background-color: #ecf0f3;
@@ -90,6 +103,12 @@ b {
   width: $width_section !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+@media screen and (max-width: $mobile) {
+  .container {
+    width: 90% !important;
+  }
 }
 
 ::-webkit-scrollbar {

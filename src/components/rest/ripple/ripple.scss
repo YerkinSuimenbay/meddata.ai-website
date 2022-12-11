@@ -47,3 +47,103 @@ $coord3: $coord2 + ($w2 - $w3)/2;
     height: $w3;
   }
 }
+
+.circles {
+  height: $w1;
+  width: $w1;
+  // position: relative;
+  position: absolute;
+  z-index: -1;
+
+  > div {
+    animation: growAndFade 15s infinite linear;
+    // background-color: dodgerblue;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 81.5316px rgba(209, 217, 230, 0.58);
+    border-radius: 50%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .circle1 {
+    animation-delay: 0s;
+  }
+  .circle2 {
+    animation-delay: 3s;
+  }
+  .circle3 {
+    animation-delay: 6s;
+  }
+  .circle4 {
+    animation-delay: 9s;
+  }
+  .circle5 {
+    animation-delay: 12s;
+  }
+  .circle6 {
+    animation-delay: 15s;
+  }
+}
+
+@keyframes growAndFade {
+  0% {
+    opacity: 1;
+    transform: scale(0.2);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+// .circles {
+//   height: 50vmin;
+//   width: 50vmin;
+//   position: absolute;
+//   z-index: -1;
+//   // overflow: hidden;
+//   // background-color: transparent;
+
+//   > div {
+//     animation: growAndFade 15s infinite linear;
+//     background: rgba(255, 255, 255, 0.3);
+//     box-shadow: 0px 0px 81.5316px rgba(209, 217, 230, 0.58);
+//     border-radius: 50%;
+//     height: 100%;
+//     opacity: 0;
+//     position: absolute;
+//     width: 100%;
+//   }
+
+//   .circle1 {
+//     animation-delay: 0s;
+//   }
+//   .circle2 {
+//     animation-delay: 3s;
+//   }
+//   .circle3 {
+//     animation-delay: 6s;
+//   }
+//   .circle4 {
+//     animation-delay: 9s;
+//   }
+//   .circle5 {
+//     animation-delay: 12s;
+//   }
+//   .circle6 {
+//     animation-delay: 15s;
+//   }
+// }
+
+// @keyframes growAndFade {
+//   0% {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+//   100% {
+//     opacity: 0.5;
+//     transform: scale(4);
+//   }
+// }

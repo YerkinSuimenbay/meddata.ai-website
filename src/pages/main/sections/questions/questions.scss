@@ -16,10 +16,7 @@ $transition-time: 0.1s;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     cursor: pointer;
-
-    padding: 1em 0;
     position: relative;
   }
 
@@ -54,7 +51,6 @@ $transition-time: 0.1s;
 
 .subquestions {
   display: grid;
-  row-gap: 1em;
 
   &__divider {
     background-color: #e8e8e8;
@@ -63,8 +59,24 @@ $transition-time: 0.1s;
 
 .subquestion {
   cursor: pointer;
-  // padding: 1em 0;
+  padding: 0.5em 0;
+  transition: all $transition-time linear;
 
-  &:not(:last-child) {
+  &:hover {
+    transform: scale(0.99);
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .question {
+    &__title__container {
+      padding: 0;
+    }
+
+    &__button {
+      img {
+        width: 1em;
+      }
+    }
   }
 }

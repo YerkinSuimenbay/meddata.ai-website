@@ -18,10 +18,6 @@
   padding: 2em;
   position: relative;
 
-  min-width: 200px;
-  min-height: 100px;
-  max-width: 50%;
-  max-height: 50%;
   border-radius: $border_radius;
   background: linear-gradient(0deg, #f1f2f6, #f1f2f6),
     linear-gradient(135deg, #e5e6e9 0%, #fdfeff 100%);
@@ -29,6 +25,7 @@
     inset -1px -1px 2px rgba(209, 217, 230, 0.5);
 
   &__closeBtn {
+    z-index: 1;
     position: absolute;
     right: 1em;
     top: 1em;
@@ -38,7 +35,25 @@
     align-items: center;
 
     svg {
+      width: 2em;
+      height: auto;
       filter: invert(1);
+    }
+  }
+
+  &__content {
+    overflow: auto;
+    max-width: 50vw;
+    max-height: 50vh;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .modal {
+    &__closeBtn {
+      svg {
+        width: 1.5em;
+      }
     }
   }
 }

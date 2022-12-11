@@ -1,21 +1,27 @@
 import Ripple from "../../../components/rest/Ripple/Ripple";
-import macBookPro17 from "../../../assets/images/MacBookPro17.svg";
+import { ReactComponent as MacBookPro17 } from "../../../assets/images/MacBookPro17.svg";
+import RippleAnimated from "../../../components/rest/Ripple/RippleAnimated";
+import GetConsultation from "../../../components/buttons/GetConsultation/GetConsultation";
 
 const Section2 = () => {
   return (
-    <section className="section__two">
-      {/* <div className="ripple">
-      <div className="c1" />
-      <div className="c2" />
-      <div className="c3" />
-    </div> */}
-      <Ripple />
-      <img src={macBookPro17} alt="MacBook Pro 17" />
+    <section className="section__two container">
+      <h2 className="section__heading section__two__heading">
+        Meddata — медицинская платформа, для <br />
+        <span className="blue">прозрачного и эффективного</span>
+        <br />
+        управления клиникой
+      </h2>
+      <RippleAnimated />
+      <MacBookPro17 className="section__two__macbook" />
+      <p className="section__two__afterMacbook blue">
+        первые результаты уже через 2 недели
+      </p>
       <p className="section__two__slogan">
         MedData is a medical platform, for transparent and efficient clinic
         management
       </p>
-      <p className="section__two__bottom-text">free consultation</p>
+      <GetConsultation text="free consultation" />
     </section>
   );
 };

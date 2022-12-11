@@ -9,9 +9,20 @@ const Section1 = () => {
           <h2>MedData.AI</h2>
         </div>
         <div className="section__one__right">
-          <h1>
+          <div className="verticalScrollingText__container">
+            <div className="verticalScrollingText">
+              <p>
+                Платформа для эффективного <br /> управления клиникой
+              </p>
+              <p>Приложение для здоровья</p>
+              <p>
+                Крипто-приложение <br /> для здоровых привычек
+              </p>
+            </div>
+          </div>
+          {/* <h1>
             Platform for efficient <br /> clinic management
-          </h1>
+          </h1> */}
         </div>
       </section>
     </div>

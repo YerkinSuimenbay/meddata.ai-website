@@ -20,7 +20,7 @@
   //   height: 80px;
   //   font-size: 24px;
 
-  &__left a {
+  &__logo a {
     display: flex;
     img {
       height: 60px;
@@ -28,7 +28,7 @@
     }
   }
 
-  &__right {
+  &__links {
     display: flex;
     gap: 2em;
     // gap: 1rem;
@@ -52,4 +52,74 @@
       }
     }
   }
+  &__lang {
+    // background-color: red;
+  }
+
+  &__burgerMenu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    &__links {
+      display: none;
+    }
+
+    &__lang {
+      display: none;
+    }
+
+    &__burgerMenu {
+      display: block;
+      position: relative;
+
+      &__btn {
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        overflow: hidden;
+        background: $color_blue_2;
+
+        svg {
+          width: 60%;
+          height: auto;
+          color: #fff;
+        }
+      }
+
+      &__content {
+        position: absolute;
+        background-color: rgb(72, 46, 46);
+      }
+
+      &__links {
+        display: grid;
+
+        a {
+          padding: 1em;
+          white-space: nowrap;
+          &:hover {
+            color: #adadad;
+          }
+
+          &.active_link {
+            color: #fff;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
 }

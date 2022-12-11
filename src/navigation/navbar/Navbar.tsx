@@ -1,9 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.scss";
 import logoMeddata from "../../assets/images/logo-meddata.svg";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
+import Lang from "../../components/rest/Lang/Lang";
+import { ReactComponent as BurgerMenu } from "../../assets/images/BurgerMenu.svg";
+
+// import { GiHamburgerMenu } from "react-icons/gi";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const links = [
   {
@@ -30,6 +35,28 @@ const links = [
 
 export const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation(["common"], { keyPrefix: "navbar" });
+  const [openBurgerMenuContent, setOpenBurgerMenuContent] = useState(false);
+  const burgerMenuRef = useRef<HTMLDivElement>(null);
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (!burgerMenuRef.current || !event.target) return;
+    if (!burgerMenuRef.current.contains(event.target as Node)) {
+      setOpenBurgerMenuContent(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const toggleOptions = () => {
+    setOpenBurgerMenuContent((prevValue) => !prevValue);
+  };
+
+  const handleClick = async () => {
+    setOpenBurgerMenuContent(false);
+  };
 
   useEffect(() => {
     const lng = localStorage.getItem("i18nextLng");
@@ -43,12 +70,12 @@ export const Navbar: React.FC = () => {
   return (
     <div className="navbar-background">
       <div className="navbar container">
-        <div className="navbar__left">
+        <div className="navbar__logo">
           <NavLink to="">
             <img src={logoMeddata} alt="meddata logo" />
           </NavLink>
         </div>
-        <div className="navbar__right">
+        <div className="navbar__links">
           {links.map((link) => (
             <NavLink
               key={link.path}
@@ -62,6 +89,38 @@ export const Navbar: React.FC = () => {
               {/* {t("test")} */}
             </NavLink>
           ))}
+        </div>
+        <div className="navbar__lang">
+          <Lang />
+        </div>
+
+        <div className="navbar__burgerMenu" ref={burgerMenuRef}>
+          <button className="navbar__burgerMenu__btn" onClick={toggleOptions}>
+            {<RxHamburgerMenu />}
+          </button>
+          {openBurgerMenuContent && (
+            <div className="navbar__burgerMenu__content">
+              <div className="navbar__burgerMenu__links">
+                {links.map((link) => (
+                  <NavLink
+                    key={link.path}
+                    to={link.path}
+                    className={({ isActive }) =>
+                      isActive ? "active_link" : undefined
+                    }
+                    // onClick={handleClick}
+                  >
+                    {/* {link.label} */}
+                    {t(link.name)}
+                    {/* {t("test")} */}
+                  </NavLink>
+                ))}
+              </div>
+              <div className="navbar__burgerMenu__lang">
+                <Lang />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

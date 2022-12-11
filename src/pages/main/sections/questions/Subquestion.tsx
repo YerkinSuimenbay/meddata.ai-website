@@ -24,9 +24,9 @@ const Subquestion: React.FC<IProps> = ({
   return (
     <React.Fragment>
       <div className="subquestion">
-        <h1 className="subquestion__title" onClick={handleClick}>
+        <h3 className="subquestion__title" onClick={handleClick}>
           {title}
-        </h1>
+        </h3>
       </div>
       {isDividerVisible && <hr className="subquestions__divider" />}
       {openModal && <Modal onClick={() => setOpenModal(false)}>{answer}</Modal>}

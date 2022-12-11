@@ -1,5 +1,47 @@
 @import "../../styles/constants";
 
+.verticalScrollingText__container {
+  // background-color: #1b294a;
+  // color: #fcfcfc;
+  height: 8em;
+  overflow: hidden;
+}
+
+.verticalScrollingText {
+  animation: flip 5s ease-in-out infinite;
+  display: grid;
+  row-gap: 2em;
+
+  p {
+    font-size: 3em;
+    font-weight: 700;
+  }
+}
+
+@keyframes flip {
+  0%,
+  33% {
+    transform: translateY(0em);
+    // transform: translateY(-1.5em);
+  }
+
+  33%,
+  66% {
+    transform: translateY(-7.6em);
+  }
+
+  66%,
+  100% {
+    transform: translateY(-14.7em);
+  }
+
+  100%,
+  0% {
+    // transform: translateY(-1.5em);
+    transform: translateY(0em);
+  }
+}
+
 .home__page {
   .section__one__background {
     width: 100%;
@@ -25,6 +67,7 @@
     }
 
     &__left {
+      // flex: 1;
       color: #fff;
       padding-right: 3em;
       margin-right: 3em;
@@ -33,6 +76,8 @@
     }
 
     &__right {
+      // flex: 3;
+
       color: #fcfcfc;
       h1 {
         font-size: 3em;
@@ -48,9 +93,19 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    text-align: center;
 
-    img {
+    &__heading {
+      display: none;
+    }
+
+    &__macbook {
       width: 50%;
+      height: auto;
+    }
+
+    &__afterMacbook {
+      display: none;
     }
 
     &__slogan {
@@ -70,24 +125,13 @@
         inset -1px -1px 2px rgba(209, 217, 230, 0.5);
       border-radius: 60.5535px;
       width: fit-content;
-      padding: 12px 50px;
+      padding: 0.2em 0.6em;
     }
   }
 
   .section__three {
     width: $width_section;
     margin: 0 auto 5em;
-    &__header {
-      color: $color_blue_dark;
-      font-weight: 700;
-      text-align: center;
-      font-size: $header_size;
-      font-weight: $header_weight;
-
-      &__blue {
-        color: $color_blue_light;
-      }
-    }
 
     &__cards {
       display: grid;
@@ -105,26 +149,13 @@
   }
 
   .section__four {
-    width: $width_section;
     margin: 0 auto 5em;
-
-    &__header {
-      color: $color_blue_dark;
-      font-weight: 700;
-      text-align: center;
-      font-size: $header_size;
-      font-weight: $header_weight;
-
-      &__blue {
-        color: $color_blue_light;
-      }
-    }
 
     &__cards {
       display: flex;
       justify-content: space-between;
-      column-gap: 1em;
-      margin: 4em 0;
+      gap: 1em;
+      margin-bottom: 4em;
 
       & > div {
         flex: 1;
@@ -140,30 +171,21 @@
   }
 
   .section__five {
-    width: $width_section;
     margin: 0 auto 5em;
   }
 
   .section__six {
-    width: $width_section;
     margin: 0 auto 5em;
-
-    &__header {
-      font-size: $header_size;
-      font-weight: $header_weight;
-      margin-bottom: 1em;
-
-      &__blue {
-        color: $color_blue_1;
-      }
-    }
 
     &__middle {
       display: flex;
+      margin-bottom: 1.5em;
+      row-gap: 1em;
 
       &__right {
-        width: 30em;
+        max-width: 30em;
         z-index: $zIndex_image;
+        margin: 0 auto;
       }
     }
 
@@ -171,7 +193,6 @@
       width: 60%;
       display: grid;
       row-gap: 1em;
-      margin-bottom: 1.5em;
     }
 
     &__card {
@@ -198,26 +219,12 @@
   }
 
   .section__seven {
-    width: $width_section;
     margin: 0 auto 5em;
-
-    &__header {
-      color: $color_blue_dark;
-      font-weight: 700;
-      text-align: center;
-      font-size: $header_size;
-      font-weight: $header_weight;
-
-      &__blue {
-        color: $color_blue_light;
-      }
-    }
 
     &__cards {
       display: flex;
       justify-content: space-between;
       column-gap: 1.5em;
-      margin: 4em 0;
 
       & > div {
         flex: 1;
@@ -234,30 +241,21 @@
   }
 
   .section__eight {
-    width: $width_section;
     margin: 0 auto 5em;
+
     &__slogan {
       margin: 1.5em 0;
       h2 {
         text-align: center;
-        font-size: $header_size;
-        font-weight: $header_weight;
-        color: $color_blue_dark;
+        // font-size: $header_size;
+        // font-weight: $header_weight;
+        // color: $color_blue_dark;
       }
     }
   }
 
   .section__about {
-    width: $width_section;
     margin: 0 auto 5em;
-    &__header {
-      color: $color_blue_dark;
-      font-weight: 700;
-      text-align: center;
-      font-size: $header_size;
-      font-weight: $header_weight;
-      margin-bottom: 1em;
-    }
 
     &__news {
       display: grid;
@@ -270,24 +268,115 @@
 
       .newsArticle__poster {
         height: 150px;
+        border-radius: $border_radius;
+        overflow: hidden;
       }
     }
   }
 
   .section__questions {
-    width: $width_section;
     margin: 0 auto 5em;
+
     border: 2px dashed $color_blue_dark;
     padding: 2em;
     border-radius: $border_radius;
+  }
+}
 
-    &__header {
-      color: $color_blue_dark;
-      font-weight: 700;
-      text-align: center;
-      font-size: $header_size;
-      font-weight: $header_weight;
-      margin-bottom: 1em;
+.section__heading {
+  font-size: $header_size;
+  font-weight: $header_weight;
+  color: $color_blue_dark;
+  text-align: center;
+  margin-bottom: 1em;
+
+  &__blue1 {
+    color: $color_blue_1;
+  }
+  &__blue2 {
+    color: $color_blue_2;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .section__heading {
+    font-size: 1.5em;
+  }
+
+  .home__page {
+    .section__one__background {
+      display: none;
+    }
+
+    .section__two {
+      padding: 2em 0;
+
+      .blue {
+        border-radius: $border_radius;
+        background-color: $color_blue_2;
+        color: #fff;
+      }
+      &__heading {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 1em;
+        .blue {
+          padding: 0.1em 0.5em;
+        }
+      }
+
+      &__macbook {
+        width: 100%;
+      }
+
+      &__afterMacbook {
+        display: block;
+        margin: 1em;
+
+        &.blue {
+          padding: 0.2em 0.6em;
+        }
+      }
+    }
+
+    .section__three {
+      &__cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .section__four {
+      &__cards {
+        flex-direction: column;
+        margin-bottom: 2em;
+      }
+    }
+
+    .section__five {
+      display: none;
+    }
+
+    .section__six {
+      &__middle {
+        flex-direction: column;
+      }
+
+      &__cards {
+        width: 100%;
+      }
+    }
+
+    .section__seven {
+      &__cards {
+        flex-direction: column;
+        row-gap: 1em;
+      }
+    }
+
+    .section__about {
+      &__news {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   }
 }

@@ -2,11 +2,13 @@ import CardWithBadge from "../../../components/cards/CardWithBadge/CardWithBadge
 
 const Section7 = () => {
   return (
-    <section className="section__seven">
-      <h2 className="section__seven__header">
+    <section className="section__seven container">
+      <h2 className="section__heading section__seven__heading">
         Your clinic, staff and physicians{" "}
-        <span className="section__six__header__blue">
-          will work like <br /> clockwork
+        <span className="section__heading__blue2">
+          will work like
+          {/* TODO: need br? */}
+          {/* <br /> */} clockwork
         </span>{" "}
         with the MedData platform
       </h2>

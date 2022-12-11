@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./main.scss";
 
 import Section1 from "./sections/Section1";
@@ -22,7 +22,7 @@ const Main: React.FC = () => {
         <Section4 />
         <Section5 />
         <Section6 />
-        {/* <Section7 /> */}
+        <Section7 />
         <Section8 />
         <SectionAbout />
         <SectionQuestions />

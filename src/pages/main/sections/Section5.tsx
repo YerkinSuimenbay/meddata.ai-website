@@ -2,7 +2,7 @@ import Ad from "../../../components/cards/Ad/Ad";
 
 const Section5 = () => {
   return (
-    <section className="section__five">
+    <section className="section__five container">
       <Ad
         topButtonText="free consultation"
         title={

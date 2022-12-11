@@ -18,8 +18,10 @@ import logoNewTimes from "../../../assets/images/logoNewTimes.svg";
 
 const SectionAbout = () => {
   return (
-    <section className="section__about">
-      <h2 className="section__about__header">Mass Media about us</h2>
+    <section className="section__about container">
+      <h2 className="section__heading section__about__heading">
+        Mass Media about us
+      </h2>
       <div className="section__about__news">
         <NewsArticle
           poster={posterForbes}

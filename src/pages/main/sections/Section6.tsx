@@ -7,11 +7,13 @@ import GetConsultation from "../../../components/buttons/GetConsultation/GetCons
 
 const Section6 = () => {
   return (
-    <section className="section__six">
-      <h2 className="section__six__header">
-        How can MedData help doctors and clinic staff <br /> work{" "}
-        <span className="section__six__header__blue">60% more efficiently</span>
-        ?
+    <section className="section__six container">
+      <h2 className="section__heading section__six__heading">
+        How can MedData help doctors and clinic staff
+        {/* TODO: return <br/> ? */}
+        {/* <br />  */}
+        work{" "}
+        <span className="section__heading__blue1">60% more efficiently</span>?
       </h2>
       <div className="section__six__middle">
         <div className="section__six__cards">

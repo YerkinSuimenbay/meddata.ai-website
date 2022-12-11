@@ -8,11 +8,13 @@ import section4BottomBlock from "../../../assets/images/section4BottomBlock.svg"
 
 const Section4 = () => {
   return (
-    <section className="section__four">
-      <h2 className="section__four__header">
+    <section className="section__four container">
+      <h2 className="section__heading section__four__heading">
         How can MedData platform connection{" "}
-        <span className="section__four__header__blue">
-          improve <br /> your clinic's performance by 60%?
+        <span className="section__heading__blue2">
+          improve
+          {/* TODO: do we need <br/>  */}
+          {/* <br /> */} your clinic's performance by 60%?
         </span>
       </h2>
       <div className="section__four__cards">

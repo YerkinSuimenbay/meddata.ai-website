@@ -2,12 +2,16 @@ import React from "react";
 import "./getConsultation.scss";
 
 interface IProps {
+  text?: string;
   onClick?: VoidFunction;
 }
-const GetConsultation: React.FC<IProps> = ({ onClick }) => {
+const GetConsultation: React.FC<IProps> = ({
+  onClick,
+  text = "to get the consultation",
+}) => {
   return (
     <button className="button getConsultationBtn" onClick={onClick}>
-      to get the consultation
+      {text}
     </button>
   );
 };

@@ -23,7 +23,7 @@
     font-size: $header_size;
     font-weight: $header_weight;
     color: #fff;
-    margin: 0.5em 0;
+    margin-bottom: 0.5em;
   }
 
   &__text {
@@ -32,11 +32,28 @@
   }
 
   &__bottom-button {
-    background-color: #ecf0f2;
+    background: #ecf0f2;
+    box-shadow: 22px 26px 14px rgba(0, 0, 0, 0.02),
+      13px 15px 12px rgba(0, 0, 0, 0.08), 6px 6px 9px rgba(0, 0, 0, 0.13),
+      1px 2px 5px rgba(0, 0, 0, 0.15), 0px 0px 0px rgba(0, 0, 0, 0.15);
     color: $color_blue_dark;
     padding: 0.3em 1em;
     border-radius: $border_radius;
     font-size: 1.4em;
     font-weight: 600;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .ad {
+    &__title {
+      font-size: 1.5em;
+    }
+
+    &__bottom-button {
+      width: 100%;
+      font-size: 1em;
+      padding: 0.6em;
+    }
   }
 }
