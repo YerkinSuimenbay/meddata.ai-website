@@ -1,6 +1,7 @@
 @import "../../styles/constants";
 
 $pointerHeight: 14em;
+$sectionMarginBottom: 3em;
 
 .about__page {
   .section__one__background {
@@ -29,6 +30,7 @@ $pointerHeight: 14em;
             rgba(0, 0, 0, 0.8)
           ),
           url("../../assets/images/unitedNations.svg");
+        // opacity: 0;
       }
       &.two {
         background-image: url("../../assets/images/newPhase.svg");
@@ -46,21 +48,20 @@ $pointerHeight: 14em;
       width: 12em;
     }
 
-    &__left {
-      color: #fff;
-      text-align: center;
-    }
-
-    &__right {
-      color: #fcfcfc;
-    }
-
     .heading {
+      text-align: left;
+      color: #fff;
       font-size: 3em;
       font-weight: 700;
       .blue {
         color: $color_blue_1;
       }
+    }
+    .heading2 {
+      font-size: 2.5em;
+      font-weight: 700;
+      color: $color_blue_1;
+      text-align: right;
     }
 
     #pointer {
@@ -78,6 +79,7 @@ $pointerHeight: 14em;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1em;
 
       padding: 2em;
       .heading {
@@ -99,6 +101,7 @@ $pointerHeight: 14em;
   }
 
   .section__two {
+    margin-bottom: $sectionMarginBottom;
     display: grid;
     grid-template-areas:
       "mission vision"
@@ -112,14 +115,27 @@ $pointerHeight: 14em;
       align-items: center;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.01);
-        backdrop-filter: blur(219.176px);
-        background-color: #239ffb80;
-        color: #fff;
+        background: linear-gradient(
+          109.45deg,
+          #b1e1f9 0%,
+          #8f9cfe 25%,
+          #6898f8 50%,
+          #7699fa 75%,
+          #cddcfd 100%
+        );
 
-        svg {
+        .section__two__heading {
           color: #fff;
-          filter: invert(1);
+        }
+        .section__two__svg {
+          filter: brightness(0) invert(1);
+        }
+
+        .dot {
+          background-color: #fff;
+        }
+        p {
+          color: #fff;
         }
       }
     }
@@ -155,12 +171,14 @@ $pointerHeight: 14em;
     }
 
     &__heading {
-      font-size: 3em;
+      font-size: 5em;
+      font-weight: 300;
       color: $color_blue_1;
     }
 
     &__content {
       flex: 1;
+      font-size: 1.2em;
 
       &.goals__content {
         display: flex;
@@ -175,7 +193,7 @@ $pointerHeight: 14em;
   }
 
   .section__three {
-    margin-bottom: 3em;
+    margin-bottom: $sectionMarginBottom;
 
     svg {
       width: 100%;
@@ -185,7 +203,7 @@ $pointerHeight: 14em;
 
   .section__four,
   .section__five {
-    margin-bottom: 3em;
+    margin-bottom: $sectionMarginBottom;
 
     &__heading {
       font-size: 3em;
@@ -233,12 +251,8 @@ $pointerHeight: 14em;
   }
 
   .section__seven {
-    margin-top: -3em;
-  }
-
-  .section__seven,
-  .section__eight {
-    margin-bottom: 3em;
+    margin-top: -$sectionMarginBottom;
+    margin-bottom: $sectionMarginBottom;
 
     &__heading {
       font-size: 3em;
@@ -261,7 +275,7 @@ $pointerHeight: 14em;
     }
   }
 
-  .section__nine {
+  .section__eight {
     margin-bottom: 3em;
 
     &__heading {
@@ -278,6 +292,72 @@ $pointerHeight: 14em;
       // align-items: flex-start;
       grid-template-columns: 2fr 1.5fr 1fr;
       column-gap: 5em;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .about__page {
+    .section__one__background {
+      & > div {
+        &.two {
+          background-image: url("../../assets/images/newPhaseSmall.svg");
+        }
+      }
+    }
+    .section__one {
+      column-gap: 2em;
+      .heading {
+        font-size: 2.5em;
+      }
+
+      #pointer {
+        padding: 1em;
+      }
+
+      img {
+        width: 8em;
+      }
+      .heading2 {
+        font-size: 2em;
+      }
+    }
+  }
+}
+@media screen and (max-width: $mobile) {
+  .about__page {
+    .section__one {
+      column-gap: 1em;
+
+      .heading {
+        font-size: 2em;
+      }
+
+      #pointer {
+        $pointerHeight: 8em;
+
+        padding: 1em;
+        bottom: 3em;
+        width: 70%;
+        height: $pointerHeight;
+
+        &:before {
+          right: -($pointerHeight/2 - 1em);
+          bottom: 0;
+          width: 0;
+          height: 0;
+          border-left: $pointerHeight/2 - 1em solid #fff;
+          border-top: $pointerHeight/2 solid transparent;
+          border-bottom: $pointerHeight/2 solid transparent;
+        }
+      }
+
+      img {
+        width: 6em;
+      }
+      .heading2 {
+        font-size: 1.3em;
+      }
     }
   }
 }

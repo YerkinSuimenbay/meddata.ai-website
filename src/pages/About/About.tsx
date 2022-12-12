@@ -7,10 +7,11 @@ import { ReactComponent as Vision } from "../../assets/images/vision.svg";
 import { ReactComponent as Goals } from "../../assets/images/goals.svg";
 import { ReactComponent as MeddataApps } from "../../assets/images/meddataApps.svg";
 import { ReactComponent as RoadMap } from "../../assets/images/roadMap.svg";
+import { ReactComponent as RoadMapRu } from "../../assets/images/roadMapRu.svg";
 import { ReactComponent as GlobalMap } from "../../assets/images/globalMap.svg";
 import { ReactComponent as TextMed } from "../../assets/images/textMed.svg";
 import { ReactComponent as TextData } from "../../assets/images/textData.svg";
-import { ReactComponent as SectionSix } from "../../assets/images/sectionSix.svg";
+import { ReactComponent as SectionSix } from "../../assets/images/SectionSix.svg";
 import CustomList from "../../components/lists/CustomList/CustomList";
 import Person from "../../components/cards/Person/Person";
 import Award from "../../components/cards/Award/Award";
@@ -30,7 +31,6 @@ import RegionalOfficer from "../../assets/images/people/RegionalOfficer.svg";
 // AWARDS
 import DigitalBridge from "../../assets/images/DigitalBridge.svg";
 import Sabi from "../../assets/images/Sabi.svg";
-import { ReactComponent as Sabic } from "../../assets/images/Sabi.svg";
 
 const people = [
   {
@@ -160,7 +160,7 @@ const About = () => {
               <img src={unitedNationsEmblem} alt="united nations logo" />
             </div>
             <div className="section__one__right">
-              <h1 className="heading">
+              <h1 className="section__heading heading">
                 The United Nations has nominated <br />{" "}
                 <span className="blue">MEDDATA</span> as the most innovative{" "}
                 <br />
@@ -173,12 +173,9 @@ const About = () => {
           <section className="section__one container">
             <div id="pointer">
               <img src={logoMeddata} alt="meddata.ai logo" />
-              <h1 className="heading">
-                {" "}
-                <span className="blue">
-                  A new phase of <br /> health care
-                </span>
-              </h1>
+              <h2 className="heading2">
+                A new phase of <br /> health care
+              </h2>
             </div>
           </section>
         </div>
@@ -189,8 +186,10 @@ const About = () => {
           <div className="section__two__center section__two__mission__center">
             <h1 className="section__two__heading">Mission</h1>
             <div className="section__two__content">
-              Ensure healthy lifestyles <br /> and the well-being of the
-              population.
+              <p>
+                Ensure healthy lifestyles <br /> and the well-being of the
+                population.
+              </p>
             </div>
             <Mission className="section__two__svg" />
           </div>
@@ -199,8 +198,10 @@ const About = () => {
           <div className="section__two__center section__two__vision__center">
             <h1 className="section__two__heading">Vision</h1>
             <div className="section__two__content">
-              To become an event that changed people's health for the better and
-              irrevocably.
+              <p>
+                To become an event that changed people's health for the better
+                and irrevocably.
+              </p>
             </div>
             <Vision className="section__two__svg" />
           </div>
@@ -230,7 +231,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="section__three">
+      <section className="section__three container">
         <MeddataApps />
       </section>
       <section className="section__four container">
@@ -238,6 +239,7 @@ const About = () => {
           MedData development plan 2022-2025
         </h1>
         <RoadMap />
+        {/* <RoadMapRu /> */}
       </section>
       <section className="section__five container">
         <h1 className="section__five__heading">MedData map</h1>
@@ -274,23 +276,9 @@ const About = () => {
           ))}
         </div>
       </section>
-      <section className="section__eight">
-        <h1 className="section__eight__heading">Advisory Board</h1>
-        <div className="section__eight__people">
-          {people.map((person) => (
-            <Person
-              key={person.position}
-              profile={person.profile}
-              name={person.name}
-              position={person.position}
-              details={person.details}
-            />
-          ))}
-        </div>
-      </section>
-      <section className="section__nine container">
-        <h1 className="section__nine__heading">Awards</h1>
-        <div className="section__nine__awards">
+      <section className="section__eight container">
+        <h1 className="section__eight__heading">Awards</h1>
+        <div className="section__eight__awards">
           {awards.map((award) => (
             <Award key={award.name} image={award.image} name={award.name} />
           ))}
