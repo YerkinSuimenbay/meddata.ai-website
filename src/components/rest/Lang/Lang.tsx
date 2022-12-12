@@ -6,8 +6,8 @@ const options = ["en", "ru"];
 
 const Lang: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [selectedLang, setSelectedLang] = useState(options[0]);
   const { t, i18n } = useTranslation();
+  const [selectedLang, setSelectedLang] = useState(i18n.language);
 
   const selectRef = useRef<HTMLDivElement>(null);
 

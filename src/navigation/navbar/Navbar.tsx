@@ -9,6 +9,7 @@ import { ReactComponent as BurgerMenu } from "../../assets/images/BurgerMenu.svg
 
 // import { GiHamburgerMenu } from "react-icons/gi";
 import { RxHamburgerMenu } from "react-icons/rx";
+import SidebarMui from "./SidebarMui";
 
 const links = [
   {
@@ -35,28 +36,7 @@ const links = [
 
 export const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation(["common"], { keyPrefix: "navbar" });
-  const [openBurgerMenuContent, setOpenBurgerMenuContent] = useState(false);
-  const burgerMenuRef = useRef<HTMLDivElement>(null);
-
-  const handleClickOutside = (event: MouseEvent) => {
-    if (!burgerMenuRef.current || !event.target) return;
-    if (!burgerMenuRef.current.contains(event.target as Node)) {
-      setOpenBurgerMenuContent(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const toggleOptions = () => {
-    setOpenBurgerMenuContent((prevValue) => !prevValue);
-  };
-
-  const handleClick = async () => {
-    setOpenBurgerMenuContent(false);
-  };
+  const [openSidebar, setOpenSidebar] = useState(true);
 
   useEffect(() => {
     const lng = localStorage.getItem("i18nextLng");
@@ -68,61 +48,45 @@ export const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <div className="navbar-background">
-      <div className="navbar container">
-        <div className="navbar__logo">
-          <NavLink to="">
-            <img src={logoMeddata} alt="meddata logo" />
-          </NavLink>
-        </div>
-        <div className="navbar__links">
-          {links.map((link) => (
-            <NavLink
-              key={link.path}
-              to={link.path}
-              className={({ isActive }) =>
-                isActive ? "active_link" : undefined
-              }
-            >
-              {/* {link.label} */}
-              {t(link.name)}
-              {/* {t("test")} */}
+    <>
+      <div className="navbar-background">
+        <div className="navbar container">
+          <div className="navbar__logo">
+            <NavLink to="">
+              <img src={logoMeddata} alt="meddata logo" />
             </NavLink>
-          ))}
-        </div>
-        <div className="navbar__lang">
-          <Lang />
-        </div>
+          </div>
+          <div className="navbar__links">
+            {links.map((link) => (
+              <NavLink
+                key={link.path}
+                to={link.path}
+                className={({ isActive }) =>
+                  isActive ? "active_link" : undefined
+                }
+              >
+                {/* {link.label} */}
+                {t(link.name)}
+                {/* {t("test")} */}
+              </NavLink>
+            ))}
+          </div>
+          <div className="navbar__lang">
+            <Lang />
+          </div>
 
-        <div className="navbar__burgerMenu" ref={burgerMenuRef}>
-          <button className="navbar__burgerMenu__btn" onClick={toggleOptions}>
-            {<RxHamburgerMenu />}
-          </button>
-          {openBurgerMenuContent && (
-            <div className="navbar__burgerMenu__content">
-              <div className="navbar__burgerMenu__links">
-                {links.map((link) => (
-                  <NavLink
-                    key={link.path}
-                    to={link.path}
-                    className={({ isActive }) =>
-                      isActive ? "active_link" : undefined
-                    }
-                    // onClick={handleClick}
-                  >
-                    {/* {link.label} */}
-                    {t(link.name)}
-                    {/* {t("test")} */}
-                  </NavLink>
-                ))}
-              </div>
-              <div className="navbar__burgerMenu__lang">
-                <Lang />
-              </div>
-            </div>
-          )}
+          <div className="navbar__burgerMenu">
+            <button
+              className="navbar__burgerMenu__btn"
+              onClick={() => setOpenSidebar(true)}
+            >
+              <RxHamburgerMenu />
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+      {/* {openSidebar && <Sidebar />} */}
+      <SidebarMui open={openSidebar} onClose={() => setOpenSidebar(false)} />
+    </>
   );
 };
