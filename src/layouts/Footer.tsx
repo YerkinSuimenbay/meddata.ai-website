@@ -11,7 +11,7 @@ const Footer = () => {
     <>
       <Outlet />
       <footer className="footer__container">
-        <div className="footer">
+        <div className="footer container">
           <div className="footer__left">
             <div className="footer__left__top">
               <LogoFacebook />

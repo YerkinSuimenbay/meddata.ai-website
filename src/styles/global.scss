@@ -75,6 +75,10 @@ b {
   margin-right: auto !important;
 }
 
+.mobile {
+  display: none;
+}
+
 .section__heading {
   font-size: $header_size;
   font-weight: $header_weight;
@@ -130,7 +134,13 @@ b {
     font-size: 8px !important;
   }
   .container {
-    width: 90% !important;
+    width: $width_section_mobile !important;
+  }
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
   }
   .section__heading {
     font-size: 1.5em !important;
@@ -174,8 +184,9 @@ b {
     font-size: 9px;
   }
   .container {
-    width: 85% !important;
+    width: $width_section_tablet !important;
   }
+
   .verticalScrollingText__container {
     height: 7em !important;
   }
@@ -213,7 +224,7 @@ b {
     font-size: 10px;
   }
   .container {
-    width: 80% !important;
+    width: $width_section_laptop !important;
   }
 }
 
