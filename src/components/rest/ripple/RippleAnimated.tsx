@@ -1,11 +1,7 @@
 import React from "react";
-import "./ripple.scss";
+import "./rippleAnimated.scss";
 
-interface IProps {
-  //   s1: number;
-  //   s2: number;
-  //   s3: number;
-}
+interface IProps {}
 const RippleAnimated: React.FC<IProps> = () => {
   return (
     <div className="circles">

@@ -22,12 +22,6 @@ const Ad: React.FC<IProps> = ({
       <h2 className="ad__title">{title}</h2>
       <p className="ad__text">{text}</p>
       <button className="ad__bottom-button">{bottomButtonText}</button>
-
-      {/* <div className="ripple">
-        <div className="circle1" />
-        <div className="circle2" />
-        <div className="circle3" />
-      </div> */}
     </div>
   );
 };

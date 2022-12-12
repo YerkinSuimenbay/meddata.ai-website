@@ -27,7 +27,7 @@ const Loadable = (Component: ElementType) => (props: any) =>
   );
 
 // const NotFound = Loadable(lazy(() => import("./pages/Page404")));
-const Main = Loadable(lazy(() => import("./pages/Main/Main")));
+const Main = Loadable(lazy(() => import("./pages/main/Main")));
 const About = Loadable(lazy(() => import("./pages/About/About")));
 // const Careers = Loadable(lazy(() => import("./pages/Careers/Careers")));
 // const News = Loadable(lazy(() => import("./pages/News/News")));

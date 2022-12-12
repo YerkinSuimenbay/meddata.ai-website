@@ -1,45 +1,12 @@
 @import "../../styles/constants";
+$sectionOneLine1: 2px;
+$sectionOneLine2: 8em;
 
 .verticalScrollingText__container {
   // background-color: #1b294a;
   // color: #fcfcfc;
   height: 8em;
   overflow: hidden;
-}
-
-.verticalScrollingText {
-  animation: flip 5s ease-in-out infinite;
-  display: grid;
-  row-gap: 2em;
-
-  p {
-    font-size: 3em;
-    font-weight: 700;
-  }
-}
-
-@keyframes flip {
-  0%,
-  33% {
-    transform: translateY(0em);
-    // transform: translateY(-1.5em);
-  }
-
-  33%,
-  66% {
-    transform: translateY(-7.6em);
-  }
-
-  66%,
-  100% {
-    transform: translateY(-14.7em);
-  }
-
-  100%,
-  0% {
-    // transform: translateY(-1.5em);
-    transform: translateY(0em);
-  }
 }
 
 .home__page {
@@ -57,27 +24,27 @@
     align-items: center;
   }
   .section__one {
-    width: $width_section;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    img {
-      width: 10em;
-    }
+    column-gap: 3em;
 
     &__left {
-      // flex: 1;
       color: #fff;
-      padding-right: 3em;
-      margin-right: 3em;
-      border-right: 2px solid;
       text-align: center;
+
+      &__logo {
+        width: 10em;
+      }
+    }
+
+    &__middle {
+      width: $sectionOneLine1;
+      height: $sectionOneLine2;
+      background-color: #fff;
     }
 
     &__right {
-      // flex: 3;
-
       color: #fcfcfc;
       h1 {
         font-size: 3em;
@@ -283,29 +250,16 @@
   }
 }
 
-.section__heading {
-  font-size: $header_size;
-  font-weight: $header_weight;
-  color: $color_blue_dark;
-  text-align: center;
-  margin-bottom: 1em;
-
-  &__blue1 {
-    color: $color_blue_1;
-  }
-  &__blue2 {
-    color: $color_blue_2;
-  }
-}
-
 @media screen and (max-width: $mobile) {
-  .section__heading {
-    font-size: 1.5em;
-  }
-
   .home__page {
-    .section__one__background {
-      display: none;
+    .section__one {
+      flex-direction: column;
+      row-gap: 2em;
+
+      &__middle {
+        width: $sectionOneLine2;
+        height: $sectionOneLine1;
+      }
     }
 
     .section__two {
@@ -353,7 +307,7 @@
     }
 
     .section__five {
-      display: none;
+      // display: none;
     }
 
     .section__six {
@@ -376,6 +330,26 @@
     .section__about {
       &__news {
         grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .home__page {
+    .section__two {
+      &__macbook {
+        width: 100%;
+      }
+    }
+
+    .section__six {
+      &__middle {
+        flex-direction: column;
+      }
+
+      &__cards {
+        width: 100%;
       }
     }
   }
