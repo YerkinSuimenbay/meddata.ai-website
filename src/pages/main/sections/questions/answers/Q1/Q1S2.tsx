@@ -1,13 +1,18 @@
 import React from "react";
-import "./q1.scss";
+import { TFunction } from "i18next";
 
-export const Q1S2 = () => {
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+
+export const Q1S2: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
-      <h2 className="questionAnswer__title">2. Who is your platform for?</h2>
+      <h2 className="questionAnswer__title">
+        {t("questions.q1.subquestions.sq2.title")}
+      </h2>
       <p className="questionAnswer__content">
-        The platform is designed for large and small medical institutions, as it
-        has a flexible constructor for creating functional departments.
+        {t("questions.q1.subquestions.sq2.answer")}
       </p>
     </div>
   );

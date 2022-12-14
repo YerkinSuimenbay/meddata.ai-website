@@ -1,13 +1,17 @@
 import React from "react";
+import { TFunction } from "i18next";
 
-export const Q5S2 = () => {
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+export const Q5S2: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
       <h2 className="questionAnswer__title">
-        2. Where will the database be stored?
+        {t("questions.q5.subquestions.sq2.title")}
       </h2>
       <p className="questionAnswer__content">
-        All information will be stored on the Cloud storage.
+        {t("questions.q5.subquestions.sq2.answer")}
       </p>
     </div>
   );

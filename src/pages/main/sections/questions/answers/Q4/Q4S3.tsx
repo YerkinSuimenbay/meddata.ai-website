@@ -1,11 +1,17 @@
-export const Q4S3 = () => {
+import React from "react";
+import { TFunction } from "i18next";
+
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+export const Q4S3: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
-      <h2 className="questionAnswer__title">3. How are payments made?</h2>
+      <h2 className="questionAnswer__title">
+        {t("questions.q4.subquestions.sq3.title")}
+      </h2>
       <p className="questionAnswer__content">
-        Payment passes through the patient's mobile application, as a result,
-        the need for a cashier's position disappears which eliminates the
-        possibility of paying past the cashier.
+        {t("questions.q4.subquestions.sq3.answer")}
       </p>
     </div>
   );

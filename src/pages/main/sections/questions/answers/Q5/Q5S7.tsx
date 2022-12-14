@@ -1,15 +1,18 @@
 import React from "react";
+import { TFunction } from "i18next";
 
-export const Q5S7 = () => {
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+
+export const Q5S7: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
       <h2 className="questionAnswer__title">
-        7. Will there be advertising inside the application?
+        {t("questions.q5.subquestions.sq7.title")}
       </h2>
       <p className="questionAnswer__content">
-        MedData has advertising for doctors and clinics to attract new patients
-        and increase the loyalty of current ones. The platform analyzes
-        advertising accounts, displaying their effectiveness.
+        {t("questions.q5.subquestions.sq7.answer")}
       </p>
     </div>
   );

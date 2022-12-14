@@ -1,13 +1,18 @@
-export const Q2S1 = () => {
+import React from "react";
+import { TFunction } from "i18next";
+
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+
+export const Q2S1: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
       <h2 className="questionAnswer__title">
-        1. How do you improve the efficiency of clinic management?
+        {t("questions.q2.subquestions.sq1.title")}
       </h2>
       <p className="questionAnswer__content">
-        MedData gives you complete statistics - from the workload of the doctor
-        to the daily expenses and income of the clinic. You can identify and
-        focus on your weak points with help of this data.
+        {t("questions.q2.subquestions.sq1.answer")}
       </p>
     </div>
   );

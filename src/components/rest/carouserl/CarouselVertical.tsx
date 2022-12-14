@@ -7,6 +7,7 @@ import React, {
   useEffect,
   useCallback,
 } from "react";
+import { useTranslation } from "react-i18next";
 // import styles from "./carousel.module.css";
 import "./carousel.scss";
 
@@ -27,6 +28,7 @@ const CarouselVertical: React.FC<IProps> = ({
   children,
   enableNavigation = false,
 }) => {
+  const { t } = useTranslation();
   const containerRef = useRef<HTMLUListElement | null>(null);
   const intervalRef = useRef<NodeJS.Timer | null>(null);
   const [current, setCurrent] = useState(1);
@@ -132,7 +134,7 @@ const CarouselVertical: React.FC<IProps> = ({
     return () => window.removeEventListener("resize", setRootHeight);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [t]);
 
   const slides = useMemo(() => {
     if (children.length > 1) {

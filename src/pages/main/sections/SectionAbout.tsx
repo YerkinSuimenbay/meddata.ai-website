@@ -68,7 +68,7 @@ const SectionAbout = () => {
       </h2>
       <div className="section__about__news">
         {news.map(({ media, title }) => (
-          <NewsArticle {...getPosterAndLogo(media)} title={title} />
+          <NewsArticle key={title} {...getPosterAndLogo(media)} title={title} />
         ))}
       </div>
     </section>

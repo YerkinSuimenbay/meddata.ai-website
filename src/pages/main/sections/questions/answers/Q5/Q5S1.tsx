@@ -1,13 +1,17 @@
 import React from "react";
+import { TFunction } from "i18next";
 
-export const Q5S1 = () => {
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+export const Q5S1: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
       <h2 className="questionAnswer__title">
-        1. Will it be difficult for doctors and patients to use?
+        {t("questions.q5.subquestions.sq1.title")}
       </h2>
       <p className="questionAnswer__content">
-        MedData is an innovative, fast and easy to use platform.
+        {t("questions.q5.subquestions.sq1.answer")}
       </p>
     </div>
   );

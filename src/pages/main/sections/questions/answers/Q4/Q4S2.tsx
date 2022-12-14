@@ -1,20 +1,20 @@
-export const Q4S2 = () => {
+import React from "react";
+import { TFunction } from "i18next";
+
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+export const Q4S2: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
       <h2 className="questionAnswer__title">
-        2. Is there integration with the call center?
+        {t("questions.q4.subquestions.sq2.title")}
       </h2>
       <p className="questionAnswer__content">
-        Based on the initial survey, the platform offers the patient to take the
-        necessary tests and make an appointment with a doctor, in this regard,
-        there is no need for MedData integration with the call center.
+        {t("questions.q4.subquestions.sq2.answer.line1")}
         <br />
         <br />
-        After the doctor's recommendations, the patient receives a notification
-        in the MedData application, in the “My treatment tracking” option, where
-        he can see all the physician prescriptions, and will also receive timely
-        reminders which will allow him to perform the prescribed procedures in
-        time.
+        {t("questions.q4.subquestions.sq2.answer.line2")}
       </p>
     </div>
   );

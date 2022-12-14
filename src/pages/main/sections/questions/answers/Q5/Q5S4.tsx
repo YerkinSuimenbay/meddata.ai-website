@@ -1,18 +1,20 @@
 import React from "react";
+import { TFunction } from "i18next";
 
-export const Q5S4 = () => {
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+export const Q5S4: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
       <h2 className="questionAnswer__title">
-        4. How long will the integration run?
+        {t("questions.q5.subquestions.sq4.title")}
       </h2>
       <p className="questionAnswer__content">
-        Integration is an individual process and depends on the number of users,
-        modules and branches. On average, the process takes one to two weeks.
+        {t("questions.q5.subquestions.sq4.answer.line1")}
         <br />
         <br />
-        After the platform implementation, MedData assigns to you a manager who
-        will supervise you during the integration.
+        {t("questions.q5.subquestions.sq4.answer.line2")}
       </p>
     </div>
   );

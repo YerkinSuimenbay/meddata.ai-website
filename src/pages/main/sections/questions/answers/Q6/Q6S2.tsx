@@ -1,12 +1,18 @@
 import React from "react";
+import { TFunction } from "i18next";
 
-export const Q6S2 = () => {
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+
+export const Q6S2: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
-      <h2 className="questionAnswer__title">2. Do you have a test period?</h2>
+      <h2 className="questionAnswer__title">
+        {t("questions.q6.subquestions.sq2.title")}
+      </h2>
       <p className="questionAnswer__content">
-        We believe that our innovative platform will be useful for you, so we
-        offer you to take advantage of the test period.
+        {t("questions.q6.subquestions.sq2.answer")}
       </p>
     </div>
   );

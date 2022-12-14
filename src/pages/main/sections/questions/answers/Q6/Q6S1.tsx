@@ -1,15 +1,20 @@
 import React from "react";
+import { TFunction } from "i18next";
 
-export const Q6S1 = () => {
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+export const Q6S1: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
-      <h2 className="questionAnswer__title">1. How much does MedData cost?</h2>
+      <h2 className="questionAnswer__title">
+        {t("questions.q6.subquestions.sq1.title")}
+      </h2>
       <p className="questionAnswer__content">
-        You use only the features you need with MedData and do not overpay.
+        {t("questions.q6.subquestions.sq1.answer.line1")}
         <br />
         <br />
-        The system automatically calculates the tariff cost, since the
-        functionality and number of employees are different for everyone.
+        {t("questions.q6.subquestions.sq1.answer.line2")}
       </p>
     </div>
   );

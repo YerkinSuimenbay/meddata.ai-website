@@ -1,14 +1,16 @@
-export const Q3S1 = () => {
+import { TFunction } from "i18next";
+
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+export const Q3S1: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
       <h2 className="questionAnswer__title">
-        How is patient progress monitored?
+        {t("questions.q3.subquestions.sq1.title")}
       </h2>
       <p className="questionAnswer__content">
-        The platform monitors the treatment dynamics with patient filling out of
-        questionnaires compiled by the physician depending on the course of
-        treatment. The patient also can connect a smart watch that tracks heart
-        rate, activity time and sleep quality.
+        {t("questions.q3.subquestions.sq1.answer")}
       </p>
     </div>
   );

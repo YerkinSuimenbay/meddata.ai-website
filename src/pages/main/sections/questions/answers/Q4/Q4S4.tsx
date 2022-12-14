@@ -1,12 +1,17 @@
-export const Q4S4 = () => {
+import React from "react";
+import { TFunction } from "i18next";
+
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+export const Q4S4: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
       <h2 className="questionAnswer__title">
-        4. Do you have access to the patient's ID card?
+        {t("questions.q4.subquestions.sq4.title")}
       </h2>
       <p className="questionAnswer__content">
-        Yes, it is possible to search for a card by ID. And access to it can be
-        got in one click from the patient.
+        {t("questions.q4.subquestions.sq4.answer")}
       </p>
     </div>
   );

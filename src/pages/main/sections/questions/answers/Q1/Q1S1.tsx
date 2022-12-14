@@ -1,15 +1,29 @@
 import React from "react";
+import { TFunction } from "i18next";
 import "./q1.scss";
 
-export const Q1S1 = () => {
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+
+export const Q1S1: React.FC<IProps> = ({ t }) => {
+  const lis = t("questions.q1.subquestions.sq1.answer.lis", {
+    returnObjects: true,
+  }) as string[];
+
   return (
     <div className="questionAnswer">
-      <h2 className="questionAnswer__title">1. What is MedData?</h2>
+      <h2 className="questionAnswer__title">
+        {t("questions.q1.subquestions.sq1.title")}
+      </h2>
       <p className="questionAnswer__content">
-        MedData AI is an artificial intelligence-based medical platform that
-        give opportunity to: the owner: to manage the clinic effectively; the
-        physician: to treat patients successfully; the patient: to receive loyal
-        service, as well as to track the health dynamics.
+        {t("questions.q1.subquestions.sq1.answer.line1")}
+        {lis.map((li) => (
+          <React.Fragment key={li}>
+            <br />
+            {li}
+          </React.Fragment>
+        ))}
       </p>
     </div>
   );

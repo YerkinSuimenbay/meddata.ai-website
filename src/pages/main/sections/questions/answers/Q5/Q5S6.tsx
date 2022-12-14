@@ -1,17 +1,19 @@
 import React from "react";
+import { TFunction } from "i18next";
 
-export const Q5S6 = () => {
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+export const Q5S6: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
       <h2 className="questionAnswer__title">
-        6. What will the platform for physicians and patients look like?
+        {t("questions.q5.subquestions.sq6.title")}
       </h2>
       <p className="questionAnswer__content">
-        The platform is available for managers and doctors in both full and
-        mobile versions.
+        {t("questions.q5.subquestions.sq6.answer.line1")}
         <br />
-        An application that can be downloaded from PlayMarket and AppStore is
-        available for the patient.
+        {t("questions.q5.subquestions.sq6.answer.line2")}
       </p>
     </div>
   );

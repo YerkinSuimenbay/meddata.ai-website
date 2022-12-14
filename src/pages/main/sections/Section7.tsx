@@ -44,6 +44,7 @@ const Section7 = () => {
         <div className="section__seven__cards__left">
           {cards.left.map((card) => (
             <CardWithBadge
+              key={card.title}
               children={
                 <div className="section__seven__card">
                   <h3 className="section__seven__card__title">{card.title}</h3>
@@ -56,6 +57,7 @@ const Section7 = () => {
         <div className="section__seven__cards__right">
           {cards.right.map((card) => (
             <CardWithBadge
+              key={card.title}
               children={
                 <div className="section__seven__card">
                   <h3 className="section__seven__card__title">{card.title}</h3>

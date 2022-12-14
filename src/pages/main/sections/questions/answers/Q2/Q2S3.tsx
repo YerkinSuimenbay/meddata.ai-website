@@ -1,13 +1,16 @@
-export const Q2S3 = () => {
+import { TFunction } from "i18next";
+
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+export const Q2S3: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
       <h2 className="questionAnswer__title">
-        3. Will the platform track cash payments or Kaspi installment payments?
+        {t("questions.q2.subquestions.sq3.title")}
       </h2>
       <p className="questionAnswer__content">
-        MedData allows you to track all financial transactions, which prevents
-        payments past the checkout. In the near future, we plan to connect Kaspi
-        by installments.
+        {t("questions.q2.subquestions.sq3.answer")}
       </p>
     </div>
   );

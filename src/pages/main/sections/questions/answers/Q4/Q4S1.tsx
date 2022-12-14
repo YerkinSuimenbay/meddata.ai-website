@@ -1,24 +1,33 @@
-export const Q4S1 = () => {
+import React from "react";
+import { TFunction } from "i18next";
+
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+export const Q4S1: React.FC<IProps> = ({ t }) => {
+  const lis = t("questions.q4.subquestions.sq1.answer.lis", {
+    returnObjects: true,
+  }) as string[];
+
   return (
     <div className="questionAnswer">
       <h2 className="questionAnswer__title">
-        1. How are you better than your competitors?
+        {t("questions.q4.subquestions.sq1.title")}
       </h2>
       <p className="questionAnswer__content">
-        The solutions presented on the market cover only a part of the tasks,
-        they are difficult to adjust to many of the clinic business processes.
+        {t("questions.q4.subquestions.sq1.answer.line1")}
         <br />
         <br />
-        The MedData medical platform is the most flexible out-of-the-box
-        solution that resolves 3 main issues:
-        <br /> • effective clinic management – for a manager;
-        <br /> • effective patients treatment – for a physician;
-        <br /> • complete health management – for a patient.
+        {t("questions.q4.subquestions.sq1.answer.line2")}
+        {lis.map((li) => (
+          <React.Fragment key={li}>
+            <br />
+            {li}
+          </React.Fragment>
+        ))}
         <br />
         <br />
-        MedData makes the opportunity to track the treatment dynamics by a
-        physician and to receive recommendations from a physician by a patient
-        during treatment.
+        {t("questions.q4.subquestions.sq1.answer.line3")}
       </p>
     </div>
   );

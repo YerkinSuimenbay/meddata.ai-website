@@ -1,18 +1,27 @@
-export const Q2S2 = () => {
+import React from "react";
+import { TFunction } from "i18next";
+
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+export const Q2S2: React.FC<IProps> = ({ t }) => {
+  const lis = t("questions.q2.subquestions.sq2.answer.lis", {
+    returnObjects: true,
+  }) as string[];
+
   return (
     <div className="questionAnswer">
       <h2 className="questionAnswer__title">
-        2. How do you increase the clinic profitability?
+        {t("questions.q2.subquestions.sq2.title")}
       </h2>
       <p className="questionAnswer__content">
-        The clinic profitability is increased due to:
-        <br /> • tracking of all financial transactions that will help you to
-        eliminate “gray” schemes;
-        <br /> • monitoring the physicians' performance;
-        <br /> • reporting automation resulting in more patients which a
-        physician will be able to see;
-        <br /> • treatment progress tracking that will increase patient loyalty
-        and positively influence their recommendations and return visits.
+        {t("questions.q1.subquestions.sq1.answer.line1")}
+        {lis.map((li) => (
+          <React.Fragment key={li}>
+            <br />
+            {li}
+          </React.Fragment>
+        ))}
       </p>
     </div>
   );

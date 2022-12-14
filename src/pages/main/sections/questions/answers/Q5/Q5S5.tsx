@@ -1,14 +1,18 @@
 import React from "react";
+import { TFunction } from "i18next";
 
-export const Q5S5 = () => {
+interface IProps {
+  t: TFunction<"main", "sectionQuestions">;
+}
+
+export const Q5S5: React.FC<IProps> = ({ t }) => {
   return (
     <div className="questionAnswer">
       <h2 className="questionAnswer__title">
-        5. What are the minimum specifications required by the platform?
+        {t("questions.q5.subquestions.sq5.title")}
       </h2>
       <p className="questionAnswer__content">
-        The mobile application is suitable for any smart phone, and managers and
-        physicians can use the platform through any PC with Internet access.
+        {t("questions.q5.subquestions.sq5.answer")}
       </p>
     </div>
   );
