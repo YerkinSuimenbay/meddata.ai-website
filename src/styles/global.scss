@@ -133,11 +133,30 @@ b {
   }
 }
 
+// SCROLL START
+/* width */
 ::-webkit-scrollbar {
-  // width: 20px; /* Remove scrollbar space */
-  // background: transparent; /* Optional: just make scrollbar invisible */
+  width: 7px;
+  height: 7px;
 }
-/* Optional: show position indicator in red */
-// ::-webkit-scrollbar-thumb {
-//   background: #ff0000;
-// }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 16px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* Directional buttons at the top and bottom of the scrollbar */
+::-webkit-scrollbar-button {
+  display: none;
+}
+// SCROLL END

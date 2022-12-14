@@ -2,31 +2,36 @@ import { ReactComponent as Mission } from "../../../assets/images/mission.svg";
 import { ReactComponent as Vision } from "../../../assets/images/vision.svg";
 import { ReactComponent as Goals } from "../../../assets/images/goals.svg";
 import CustomList from "../../../components/lists/CustomList/CustomList";
+import { useTranslation } from "react-i18next";
 
 const Section2 = () => {
+  const { t } = useTranslation(["about"], { keyPrefix: "section2" });
+
   return (
     <section className="section__two">
       <div className="section__two__top">
         <div className="section__two__mission">
           <div className="section__two__center section__two__mission__center">
-            <h1 className="section__two__heading">Mission</h1>
+            <h1 className="section__two__heading">{t("mission.heading")}</h1>
             <div className="section__two__content">
-              <p>
-                Ensure healthy lifestyles <br /> and the well-being of the
-                population.
-              </p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t("mission.content") as string,
+                }}
+              />
             </div>
             <Mission className="section__two__svg" />
           </div>
         </div>
         <div className="section__two__vision">
           <div className="section__two__center section__two__vision__center">
-            <h1 className="section__two__heading">Vision</h1>
+            <h1 className="section__two__heading">{t("vision.heading")}</h1>
             <div className="section__two__content">
-              <p>
-                To become an event that changed people's health for the better
-                and irrevocably.
-              </p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t("vision.content") as string,
+                }}
+              />
             </div>
             <Vision className="section__two__svg" />
           </div>
@@ -35,22 +40,15 @@ const Section2 = () => {
       <div className="section__two__bottom">
         <div className="section__two__goals">
           <div className="section__two__center container">
-            <h1 className="section__two__heading">Goals</h1>
+            <h1 className="section__two__heading">{t("goals.heading")}</h1>
             <div className="section__two__content goals__content">
               <CustomList
                 type="dot"
-                items={[
-                  "Become a leader among medical platforms",
-                  "Gain the trust of employees, partners and customers",
-                ]}
+                items={t("goals.content.left", { returnObjects: true })}
               />
               <CustomList
                 type="dot"
-                items={[
-                  "Provide high security and reliability for employees, partners and customers",
-                  "Implement the credo “We are all clients to each other”, respect each other and clients",
-                  "Become a fintech company",
-                ]}
+                items={t("goals.content.right", { returnObjects: true })}
               />
             </div>
             <Goals className="section__two__svg" />
@@ -58,15 +56,12 @@ const Section2 = () => {
         </div>
         <div className="section__two__motivation">
           <div className="section__two__center container">
-            <h1 className="section__two__heading">Motivation</h1>
+            <h1 className="section__two__heading">{t("motivation.heading")}</h1>
             <div className="section__two__content goals__content">
-              We are motivated by the value we bring to society, and even more
-              motivated by the value we have yet to bring.
+              {t("motivation.content.line1")}
               <br />
               <br />
-              We want the patient, the doctor and medicine to work hand in hand
-              for the development of a healthy, happy and educated society to
-              create a new and better world.
+              {t("motivation.content.line2")}
             </div>
             <Goals className="section__two__svg" />
           </div>

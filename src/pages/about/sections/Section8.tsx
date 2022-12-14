@@ -2,28 +2,33 @@ import Award from "../../../components/cards/Award/Award";
 import DigitalBridge from "../../../assets/images/DigitalBridge.svg";
 import Sabi from "../../../assets/images/Sabi.svg";
 import unitedNationsEmblem from "../../../assets/images/unitedNationsEmblem.svg";
-
-const awards = [
-  {
-    image: DigitalBridge,
-    name: "Innovation of the Year 2021",
-  },
-  {
-    image: unitedNationsEmblem,
-    name: "TOP-100 innovative digital solutions of the world",
-  },
-  {
-    image: Sabi,
-    name: 'Winner of the "Build Your Own Business" contest from the Sabi Foundation"',
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const Section8 = () => {
+  const { t } = useTranslation("about", { keyPrefix: "section8" });
+
+  const awards = [
+    {
+      image: DigitalBridge,
+      name: t("awards.0"),
+    },
+    {
+      image: unitedNationsEmblem,
+      name: t("awards.1"),
+    },
+    {
+      image: Sabi,
+      name: t("awards.2"),
+    },
+  ];
+
   return (
     <section className="section__eight">
-      <h1 className="section__heading section__eight__heading">Awards</h1>
+      <h1 className="section__heading section__eight__heading">
+        {t("heading")}
+      </h1>
       <div className="section__eight__awards">
-        {awards.map((award, index) => (
+        {awards.map((award) => (
           <Award key={award.name} image={award.image} name={award.name} />
         ))}
       </div>

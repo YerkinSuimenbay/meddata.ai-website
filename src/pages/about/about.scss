@@ -51,7 +51,7 @@ $sectionMarginBottom: 2em;
     .heading {
       text-align: left;
       color: #fff;
-      font-size: 3em;
+      margin-bottom: 0;
       font-weight: 700;
       .blue {
         color: $color_blue_1;
@@ -68,6 +68,7 @@ $sectionMarginBottom: 2em;
       position: absolute;
       left: 3em;
       width: 45%;
+      min-width: 575px;
       height: $pointerHeight;
       background: rgb(255, 255, 255);
       background: linear-gradient(
@@ -137,7 +138,7 @@ $sectionMarginBottom: 2em;
         }
 
         .dot {
-          background-color: #fff;
+          color: #fff;
         }
         p {
           color: #fff;
@@ -263,6 +264,13 @@ $sectionMarginBottom: 2em;
       & > div {
         width: 300px;
       }
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
     }
   }
 
@@ -295,27 +303,25 @@ $sectionMarginBottom: 2em;
           // min-width: 50%;
         }
       }
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
     }
   }
 }
 
 @media screen and (max-width: $laptop) {
   .about__page {
-    .section__one__background {
-      & > div {
-        &.two {
-          background-image: url("../../assets/images/newPhaseSmall.svg");
-        }
-      }
-    }
     .section__one {
       column-gap: 2em;
-      .heading {
-        font-size: 2.5em;
-      }
 
       #pointer {
         padding: 1em;
+        min-width: 437px;
       }
 
       img {
@@ -323,6 +329,24 @@ $sectionMarginBottom: 2em;
       }
       .heading2 {
         font-size: 2em;
+      }
+    }
+
+    .section__two {
+      &__mission {
+        &__center {
+          margin-left: 100% - $width_section_laptop;
+          margin-right: 10%;
+        }
+      }
+      &__vision {
+        &__center {
+          margin-left: 10%;
+          margin-right: 100% - $width_section_laptop;
+        }
+      }
+      &__heading {
+        font-size: 3em;
       }
     }
 
@@ -362,30 +386,43 @@ $sectionMarginBottom: 2em;
 }
 @media screen and (max-width: $tablet) {
   .about__page {
-    // .section__one__background {
-    //   & > div {
-    //     &.two {
-    //       background-image: url("../../assets/images/newPhaseSmall.svg");
-    //     }
-    //   }
-    // }
-    // .section__one {
-    //   column-gap: 2em;
-    //   .heading {
-    //     font-size: 2.5em;
-    //   }
+    .section__one__background {
+      & > div {
+        &.two {
+          background-image: url("../../assets/images/newPhaseSmall.svg");
+        }
+      }
+    }
+    .section__one {
+      // column-gap: 2em;
 
-    //   #pointer {
-    //     padding: 1em;
-    //   }
+      #pointer {
+        $pointerHeight: 8em;
+        left: 3em;
+        padding: 1em;
+        bottom: 3em;
+        width: 65%;
+        min-width: unset;
+        height: $pointerHeight;
 
-    //   img {
-    //     width: 8em;
-    //   }
-    //   .heading2 {
-    //     font-size: 2em;
-    //   }
-    // }
+        &:before {
+          right: -($pointerHeight/2 - 1em);
+          bottom: 0;
+          width: 0;
+          height: 0;
+          border-left: $pointerHeight/2 - 1em solid #fff;
+          border-top: $pointerHeight/2 solid transparent;
+          border-bottom: $pointerHeight/2 solid transparent;
+        }
+      }
+
+      img {
+        width: 7em;
+      }
+      .heading2 {
+        font-size: 1.5em;
+      }
+    }
 
     .section__two {
       &__mission {
@@ -399,6 +436,9 @@ $sectionMarginBottom: 2em;
           margin-left: 10%;
           margin-right: 100% - $width_section_tablet;
         }
+      }
+      &__heading {
+        font-size: 2.5em;
       }
     }
 
@@ -438,16 +478,11 @@ $sectionMarginBottom: 2em;
 @media screen and (max-width: $mobile) {
   .about__page {
     .section__one {
-      column-gap: 1em;
-
-      .heading {
-        font-size: 2em;
-      }
-
       #pointer {
         $pointerHeight: 8em;
 
         padding: 1em;
+        left: 1em;
         bottom: 3em;
         width: 70%;
         height: $pointerHeight;
@@ -467,7 +502,7 @@ $sectionMarginBottom: 2em;
         width: 6em;
       }
       .heading2 {
-        font-size: 1.3em;
+        font-size: 1em;
       }
     }
 
@@ -492,9 +527,6 @@ $sectionMarginBottom: 2em;
         }
         .section__two__svg {
           filter: brightness(0) invert(1);
-        }
-        .dot {
-          background-color: #fff;
         }
         p {
           color: #fff;

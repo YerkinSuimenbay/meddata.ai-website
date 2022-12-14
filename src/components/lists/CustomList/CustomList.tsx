@@ -25,6 +25,7 @@ const CustomList: React.FC<IList> = ({ title, type, items }) => {
         {items.map((item) => (
           <div key={item} className="custionList__item">
             {renderListStyle()}
+
             <p>{item}</p>
           </div>
         ))}

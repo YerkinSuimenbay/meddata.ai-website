@@ -1,8 +1,50 @@
 import { useEffect, useRef } from "react";
 import unitedNationsEmblem from "../../../assets/images/unitedNationsEmblem.svg";
 import logoMeddata from "../../../assets/images/logo-meddata.svg";
+import { useTranslation } from "react-i18next";
+import { Lang } from "../../../types";
 
 const Section1 = () => {
+  const { i18n } = useTranslation();
+
+  // const cards: { text: string; badgeText: string }[] = t("cards", {
+  //   returnObjects: true,
+  // });
+
+  const renderHeading = () => {
+    if (i18n.language === Lang.ru) {
+      return (
+        <>
+          ООН номинировал <br /> <span className="blue">MEDDATA</span> как самое
+          инновационное цифровое решение
+        </>
+      );
+    }
+    return (
+      <>
+        The United Nations has nominated <br />{" "}
+        <span className="blue">MEDDATA</span> as the most innovative digital
+        solution
+      </>
+    );
+  };
+
+  const renderHeading2 = () => {
+    if (i18n.language === Lang.ru) {
+      return (
+        <>
+          Новый этап <br />
+          здравоохранения
+        </>
+      );
+    }
+    return (
+      <>
+        A new phase of <br /> health care
+      </>
+    );
+  };
+
   const backgroundTwoRef = useRef<HTMLDivElement | null>(null);
 
   const fadeInFadeOut = () => {
@@ -25,12 +67,7 @@ const Section1 = () => {
             <img src={unitedNationsEmblem} alt="united nations logo" />
           </div>
           <div className="section__one__right">
-            <h1 className="section__heading heading">
-              The United Nations has nominated <br />{" "}
-              <span className="blue">MEDDATA</span> as the most innovative{" "}
-              <br />
-              digital solution
-            </h1>
+            <h1 className="section__heading heading">{renderHeading()}</h1>
           </div>
         </section>
       </div>
@@ -38,9 +75,7 @@ const Section1 = () => {
         <section className="section__one container">
           <div id="pointer">
             <img src={logoMeddata} alt="meddata.ai logo" />
-            <h2 className="heading2">
-              A new phase of <br /> health care
-            </h2>
+            <h2 className="heading2">{renderHeading2()}</h2>
           </div>
         </section>
       </div>

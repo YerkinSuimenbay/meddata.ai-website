@@ -47,3 +47,9 @@ $coord4: 1.5em;
     bottom: $coord4;
   }
 }
+
+@media screen and (max-width: $tablet) {
+  .rippleAd {
+    display: none;
+  }
+}

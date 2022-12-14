@@ -1,0 +1,128 @@
+{
+  "section2": {
+    "mission": {
+      "heading": "Mission",
+      "content": "Ensure healthy lifestyles <br /> and the well-being of the population."
+    },
+    "vision": {
+      "heading": "Vision",
+      "content": "To become an event that changed <br /> people's health for the better <br /> and irrevocably."
+    },
+    "goals": {
+      "heading": "Goals",
+      "content": {
+        "left": [
+          "Become a leader among medical platforms",
+          "Gain the trust of employees, partners and customers"
+        ],
+        "right": [
+          "Provide high security and reliability for employees, partners and customers",
+          "Implement the credo “We are all clients to each other”, respect each other and clients",
+          "Become a fintech company"
+        ]
+      }
+    },
+    "motivation": {
+      "heading": "Motivation",
+      "content": {
+        "line1": "We are motivated by the value we bring to society, and even more motivated by the value we have yet to bring.",
+        "line2": "We want the patient, the doctor and medicine to work hand in hand for the development of a healthy, happy and educated society to create a new and better world."
+      }
+    }
+  },
+  "section4": {
+    "heading": "MedData development plan 2022-2025"
+  },
+  "section5": {
+    "heading": "MedData map"
+  },
+  "section7": {
+    "heading": "Who are we?",
+    "CEO": {
+      "name": "Sheikhislam Sahi",
+      "position": "Founder, CEO",
+      "details": ["Neurosurgeon, neurobiologist.", "30 Under 30 Forbes Member"]
+    },
+    "RegionalOfficer": {
+      "name": "Islam Mamadzhanov",
+      "position": "Regional officer",
+      "details": [
+        "Entrepreneurship for 11 years",
+        "Founder of IMB Croup (IT company)",
+        "Founder, Erasmus SKSU (EdTech)",
+        "Education: University of Montana, Austria; Polytechnic of Valencia, Spain"
+      ]
+    },
+    "ProductDirector": {
+      "name": "Alzhan Sainov",
+      "position": "Product Director",
+      "details": [
+        "Crypto expert with 5 years of Experience",
+        "Creator of the concept of \"Get treated-Earn\" in MedData"
+      ]
+    },
+    "LegalOfficer": {
+      "name": "Khalel Tuganbayev",
+      "position": "Legal officer",
+      "details": [
+        "More than 10 years of experience in law and more than 8 years in the Big Four company.",
+        "Advised on issues of the World Bank, the European Bank for Reconstruction and Development, Eurasian Resources Group. Participated in the development of laws of the Republic of Kazakhstan."
+      ]
+    },
+    "TechnicalDirector": {
+      "name": "Rachit Tomar",
+      "position": "Technical Director",
+      "details": [
+        "More than 10 years of experience in the field of medical technology",
+        "Worked on the development of well-known medical products in India",
+        "Participated in the creation of blockchain technology in the fintech sector"
+      ]
+    },
+    "CMO": {
+      "name": "Yana Ten",
+      "position": "CMO",
+      "details": [
+        "An expert with 7 years of marketing experience",
+        "Built strategies for startups in such regions as the UAE, the UK, Indonesia and the CIS"
+      ]
+    },
+    "Neurosurgeon": {
+      "name": "Aziz Akkaev",
+      "position": "Neurosurgeon",
+      "details": [
+        "Worked in 40 countries",
+        "Founded 2 clinics of a new format - \"Center for Pain Treatment and Regenerative Medicine\""
+      ]
+    },
+    "HeadOfDesign": {
+      "name": "Khalilova Maryam",
+      "position": "Head of design",
+      "details": [
+        "More than 19,000 hours in design, work in projects in 18 countries of the world"
+      ]
+    },
+    "CPO": {
+      "name": "Dilmurat Islamov",
+      "position": "CPO",
+      "details": [
+        "Participated in the development of Zood Superapp and Alfabank"
+      ]
+    },
+    "CFO": {
+      "name": "Sadvakas Sanjar",
+      "position": "CFO",
+      "details": [
+        "He has more than 7 years of audit experience in the \"big Four\"",
+        "At various times, he headed the reporting and control department, as well as financial departments in various industries"
+      ]
+    }
+  },
+  "section8": {
+    "heading": "Awards",
+    "awards": [
+      "Innovation of the Year 2021",
+      "TOP-100 innovative digital solutions of the world",
+      "Winner of the \"Build Your Own Business\" contest from the Sabi Foundation"
+    ]
+  }
+}
