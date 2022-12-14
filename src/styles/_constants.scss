@@ -4,6 +4,15 @@ $width_section_mobile: 90%;
 $width_section_tablet: 85%;
 $width_section_laptop: 80%;
 $width_section: 71%;
+$margin_section: 0 auto 3em;
+
+$mobile: 480px;
+// $mobile: 600px;
+$tablet: 768px;
+// $laptop: 992px;
+$laptop: 1024px;
+$desktop: 1440px;
+$extraLargeScreen: 1441px;
 
 $header_size: 3em;
 $header_weight: 800;
@@ -24,14 +33,6 @@ $zIndex_image: 1;
 $zIndex_modal: 100;
 
 $padding_card: 3rem 2rem;
-
-// $mobile: 480px;
-$mobile: 600px;
-$tablet: 768px;
-// $laptop: 992px;
-$laptop: 1024px;
-$desktop: 1200px;
-$extraLargeScreen: 1201px;
 
 // FONTS
 @font-face {

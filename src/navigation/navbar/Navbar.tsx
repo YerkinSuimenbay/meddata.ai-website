@@ -36,7 +36,7 @@ const links = [
 
 export const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation(["common"], { keyPrefix: "navbar" });
-  const [openSidebar, setOpenSidebar] = useState(true);
+  const [openSidebar, setOpenSidebar] = useState(false);
 
   useEffect(() => {
     const lng = localStorage.getItem("i18nextLng");

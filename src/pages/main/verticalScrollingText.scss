@@ -1,0 +1,402 @@
+@import "../../styles/constants";
+$break-point-1: 1335px;
+$break-point-2: 1212px;
+$break-point-3: 1133px;
+$break-point-4: 1060px;
+$break-point-5: 1024px;
+$break-point-6: 999px;
+$break-point-7: 909px;
+$break-point-8: 852px;
+$break-point-9: 800px;
+
+.verticalScrollingText {
+  animation: flip 5s ease-in-out infinite;
+  display: grid;
+  row-gap: 2em;
+
+  .text {
+    font-size: 3em;
+    font-weight: 700;
+  }
+}
+
+@keyframes flip {
+  0%,
+  33% {
+    transform: translateY(0em);
+    // transform: translateY(-1.5em);
+  }
+
+  33%,
+  66% {
+    transform: translateY(-7.6em);
+  }
+
+  66%,
+  100% {
+    transform: translateY(-14.7em);
+  }
+
+  100%,
+  0% {
+    // transform: translateY(-1.5em);
+    transform: translateY(0em);
+  }
+}
+
+@media screen and (min-width: ($break-point-2 + 1px)) and (max-width: $break-point-1) {
+  .verticalScrollingText__container {
+    height: 10.5em;
+  }
+  .verticalScrollingText {
+    // animation: none;
+    row-gap: 4em;
+  }
+  @keyframes flip {
+    0%,
+    33% {
+      transform: translateY(0em);
+    }
+
+    33%,
+    66% {
+      transform: translateY(-11.5em);
+    }
+
+    66%,
+    100% {
+      transform: translateY(-21em);
+    }
+
+    100%,
+    0% {
+      transform: translateY(0em);
+    }
+  }
+}
+@media screen and (min-width: ($break-point-3 + 1px)) and (max-width: $break-point-2) {
+  .verticalScrollingText__container {
+    height: 10.5em;
+  }
+  .verticalScrollingText {
+    // animation: none;
+    row-gap: 4em;
+  }
+  @keyframes flip {
+    0%,
+    33% {
+      transform: translateY(0em);
+    }
+
+    33%,
+    66% {
+      transform: translateY(-13.3em);
+    }
+
+    66%,
+    100% {
+      transform: translateY(-24.5em);
+    }
+
+    100%,
+    0% {
+      transform: translateY(0em);
+    }
+  }
+}
+@media screen and (min-width: ($break-point-4 + 1px)) and (max-width: $break-point-3) {
+  .verticalScrollingText__container {
+    height: 10.5em;
+  }
+  .verticalScrollingText {
+    animation: none;
+    row-gap: 4em;
+  }
+  @keyframes flip {
+    0%,
+    33% {
+      transform: translateY(0em);
+    }
+
+    33%,
+    66% {
+      transform: translateY(-13.3em);
+    }
+
+    66%,
+    100% {
+      transform: translateY(-26.5em);
+    }
+
+    100%,
+    0% {
+      transform: translateY(0em);
+    }
+  }
+}
+@media screen and (min-width: ($break-point-5 + 1px)) and (max-width: $break-point-4) {
+  .verticalScrollingText__container {
+    height: 10.5em;
+  }
+  .verticalScrollingText {
+    // animation: none;
+    row-gap: 4em;
+    .text {
+      font-size: 2.9em;
+    }
+  }
+  @keyframes flip {
+    0%,
+    33% {
+      transform: translateY(0em);
+    }
+
+    33%,
+    66% {
+      transform: translateY(-12.5em);
+    }
+
+    66%,
+    100% {
+      transform: translateY(-25.5em);
+    }
+
+    100%,
+    0% {
+      transform: translateY(0em);
+    }
+  }
+}
+@media screen and (min-width: ($break-point-6 + 1px)) and (max-width: $break-point-5) {
+  .verticalScrollingText__container {
+    height: 6.2em;
+  }
+  .verticalScrollingText {
+    // animation: none;
+    row-gap: 2em;
+    .text {
+      font-size: 2.5em;
+    }
+  }
+  @keyframes flip {
+    0%,
+    33% {
+      transform: translateY(0em);
+    }
+
+    33%,
+    66% {
+      transform: translateY(-6.5em);
+    }
+
+    66%,
+    100% {
+      transform: translateY(-13em);
+    }
+
+    100%,
+    0% {
+      transform: translateY(0em);
+    }
+  }
+}
+@media screen and (min-width: ($break-point-7 + 1px)) and (max-width: $break-point-6) {
+  .verticalScrollingText__container {
+    height: 8.7em;
+  }
+  .verticalScrollingText {
+    // animation: none;
+    row-gap: 3em;
+    .text {
+      font-size: 2.5em;
+    }
+  }
+  @keyframes flip {
+    0%,
+    33% {
+      transform: translateY(0em);
+    }
+
+    33%,
+    66% {
+      transform: translateY(-9.5em);
+    }
+
+    66%,
+    100% {
+      transform: translateY(-16.9em);
+    }
+
+    100%,
+    0% {
+      transform: translateY(0em);
+    }
+  }
+}
+@media screen and (min-width: ($break-point-8 + 1px)) and (max-width: $break-point-7) {
+  .verticalScrollingText__container {
+    height: 8.7em;
+  }
+  .verticalScrollingText {
+    // animation: none;
+    row-gap: 3em;
+    .text {
+      font-size: 2.5em;
+    }
+  }
+  @keyframes flip {
+    0%,
+    33% {
+      transform: translateY(0em);
+    }
+
+    33%,
+    66% {
+      transform: translateY(-10.6em);
+    }
+
+    66%,
+    100% {
+      transform: translateY(-19.9em);
+    }
+
+    100%,
+    0% {
+      transform: translateY(0em);
+    }
+  }
+}
+@media screen and (min-width: ($break-point-9 + 1px)) and (max-width: $break-point-8) {
+  .verticalScrollingText__container {
+    height: 8.7em;
+  }
+  .verticalScrollingText {
+    // animation: none;
+    row-gap: 3em;
+    .text {
+      font-size: 2.5em;
+    }
+  }
+  @keyframes flip {
+    0%,
+    33% {
+      transform: translateY(0em);
+    }
+
+    33%,
+    66% {
+      transform: translateY(-10.6em);
+    }
+
+    66%,
+    100% {
+      transform: translateY(-21.6em);
+    }
+
+    100%,
+    0% {
+      transform: translateY(0em);
+    }
+  }
+}
+@media screen and (min-width: ($tablet + 1px)) and (max-width: $break-point-9) {
+  .verticalScrollingText__container {
+    height: 7.9em;
+  }
+  .verticalScrollingText {
+    // animation: none;
+    row-gap: 3em;
+    .text {
+      font-size: 2.1em;
+    }
+  }
+  @keyframes flip {
+    0%,
+    33% {
+      transform: translateY(0em);
+    }
+
+    33%,
+    66% {
+      transform: translateY(-9.6em);
+    }
+
+    66%,
+    100% {
+      transform: translateY(-17.8em);
+    }
+
+    100%,
+    0% {
+      transform: translateY(0em);
+    }
+  }
+}
+@media screen and (min-width: ($mobile+1px)) and (max-width: $tablet) {
+  .verticalScrollingText__container {
+    height: 4.9em;
+  }
+  .verticalScrollingText {
+    // animation: none;
+    .text {
+      text-align: center;
+      font-size: 2em;
+    }
+  }
+  @keyframes flip {
+    0%,
+    33% {
+      transform: translateY(0em);
+    }
+
+    33%,
+    66% {
+      transform: translateY(-5.6em);
+    }
+
+    66%,
+    100% {
+      transform: translateY(-11.3em);
+    }
+
+    100%,
+    0% {
+      transform: translateY(0em);
+    }
+  }
+}
+@media screen and (max-width: $mobile) {
+  .verticalScrollingText__container {
+    height: 4em !important;
+  }
+  .verticalScrollingText {
+    // animation: none;
+    .text {
+      text-align: center !important;
+      font-size: 1.5em !important;
+    }
+  }
+  @keyframes flip {
+    0%,
+    33% {
+      transform: translateY(0.2em);
+      // transform: translateY(-1.5em);
+    }
+
+    33%,
+    66% {
+      transform: translateY(-4.4em);
+    }
+
+    66%,
+    100% {
+      transform: translateY(-9.1em);
+    }
+
+    100%,
+    0% {
+      // transform: translateY(-1.5em);
+      transform: translateY(0.2em);
+    }
+  }
+}

@@ -36,6 +36,9 @@ $sectionOneLine2: 8em;
       &__logo {
         width: 10em;
       }
+      &__logoText {
+        font-weight: 800;
+      }
     }
 
     &__middle {
@@ -46,9 +49,11 @@ $sectionOneLine2: 8em;
 
     &__right {
       color: #fcfcfc;
-      h1 {
+
+      &__text {
         font-size: 3em;
         font-weight: 700;
+        padding: 15px 0;
       }
     }
   }
@@ -97,7 +102,6 @@ $sectionOneLine2: 8em;
   }
 
   .section__three {
-    width: $width_section;
     margin: 0 auto 5em;
 
     &__cards {
@@ -250,6 +254,55 @@ $sectionOneLine2: 8em;
   }
 }
 
+@media screen and (max-width: $laptop) {
+  .home__page {
+    .section__one {
+      column-gap: 2em;
+      &__right {
+        &__text {
+          font-size: 2.5em;
+          padding: 15px 0;
+        }
+      }
+    }
+    .section__two {
+      &__macbook {
+        width: 100%;
+      }
+    }
+
+    .section__six {
+      &__middle {
+        &__right {
+          width: 25em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .home__page {
+    .section__one {
+      &__right {
+        &__text {
+          font-size: 2em;
+          padding: 15px 0;
+        }
+      }
+    }
+    .section__six {
+      &__middle {
+        flex-direction: column;
+      }
+
+      &__cards {
+        width: 100%;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: $mobile) {
   .home__page {
     .section__one {
@@ -259,6 +312,16 @@ $sectionOneLine2: 8em;
       &__middle {
         width: $sectionOneLine2;
         height: $sectionOneLine1;
+      }
+      &__right {
+        .Slide {
+          justify-content: center;
+        }
+        &__text {
+          font-size: 1.5em;
+          padding: 15px 0;
+          text-align: center;
+        }
       }
     }
 
@@ -313,6 +376,9 @@ $sectionOneLine2: 8em;
     .section__six {
       &__middle {
         flex-direction: column;
+        &__right {
+          width: 100%;
+        }
       }
 
       &__cards {
@@ -330,26 +396,6 @@ $sectionOneLine2: 8em;
     .section__about {
       &__news {
         grid-template-columns: 1fr 1fr;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: $laptop) {
-  .home__page {
-    .section__two {
-      &__macbook {
-        width: 100%;
-      }
-    }
-
-    .section__six {
-      &__middle {
-        flex-direction: column;
-      }
-
-      &__cards {
-        width: 100%;
       }
     }
   }

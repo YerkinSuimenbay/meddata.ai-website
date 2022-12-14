@@ -9,9 +9,7 @@
 }
 
 .navbar {
-  width: $width;
-  // max-width: $max-width;
-  margin: 0 auto;
+  margin: 0 auto !important;
   display: flex;
   gap: 1rem;
   align-items: center;

@@ -70,9 +70,8 @@ b {
 }
 
 .container {
-  width: $width_section !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  width: $width_section;
+  margin: $margin_section;
 }
 
 .mobile {
@@ -94,41 +93,6 @@ b {
   }
 }
 
-.verticalScrollingText {
-  animation: flip 5s ease-in-out infinite;
-  display: grid;
-  row-gap: 2em;
-
-  .text {
-    font-size: 3em;
-    font-weight: 700;
-  }
-}
-
-@keyframes flip {
-  0%,
-  33% {
-    transform: translateY(0em);
-    // transform: translateY(-1.5em);
-  }
-
-  33%,
-  66% {
-    transform: translateY(-7.6em);
-  }
-
-  66%,
-  100% {
-    transform: translateY(-14.7em);
-  }
-
-  100%,
-  0% {
-    // transform: translateY(-1.5em);
-    transform: translateY(0em);
-  }
-}
-
 @media screen and (max-width: $mobile) {
   html {
     font-size: 8px !important;
@@ -145,93 +109,34 @@ b {
   .section__heading {
     font-size: 1.5em !important;
   }
-  .verticalScrollingText__container {
-    height: 4em !important;
-  }
-  .verticalScrollingText {
-    // animation: none;
-    .text {
-      text-align: center !important;
-      font-size: 1.5em !important;
-    }
-  }
-  @keyframes flip {
-    0%,
-    33% {
-      transform: translateY(0.2em);
-      // transform: translateY(-1.5em);
-    }
-
-    33%,
-    66% {
-      transform: translateY(-4.4em);
-    }
-
-    66%,
-    100% {
-      transform: translateY(-9.1em);
-    }
-
-    100%,
-    0% {
-      // transform: translateY(-1.5em);
-      transform: translateY(0.2em);
-    }
-  }
 }
-@media screen and (min-width: $mobile) and (max-width: $tablet) {
+@media screen and (min-width: ($mobile+1px)) and (max-width: $tablet) {
   html {
     font-size: 9px;
   }
   .container {
     width: $width_section_tablet !important;
   }
-
-  .verticalScrollingText__container {
-    height: 7em !important;
-  }
-  .verticalScrollingText {
-    // animation: none !important;
-    .text {
-      text-align: center !important;
-      font-size: 2em !important;
-    }
-  }
-  @keyframes flip {
-    0%,
-    33% {
-      transform: translateY(0em);
-    }
-
-    33%,
-    66% {
-      transform: translateY(-8em);
-    }
-
-    66%,
-    100% {
-      transform: translateY(-16.2em);
-    }
-
-    100%,
-    0% {
-      transform: translateY(0em);
-    }
+  .section__heading {
+    font-size: 2em !important;
   }
 }
-@media screen and (min-width: $tablet) and (max-width: $laptop) {
+@media screen and (min-width: ($tablet+1px)) and (max-width: $laptop) {
   html {
     font-size: 10px;
   }
   .container {
     width: $width_section_laptop !important;
   }
+  .section__heading {
+    font-size: 2.5em !important;
+  }
 }
 
-// ::-webkit-scrollbar {
-//   width: 0; /* Remove scrollbar space */
-//   background: transparent; /* Optional: just make scrollbar invisible */
-// }
+::-webkit-scrollbar {
+  // width: 20px; /* Remove scrollbar space */
+  // background: transparent; /* Optional: just make scrollbar invisible */
+}
 /* Optional: show position indicator in red */
 // ::-webkit-scrollbar-thumb {
 //   background: #ff0000;

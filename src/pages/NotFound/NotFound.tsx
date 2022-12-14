@@ -1,8 +1,0 @@
-import React from "react";
-import "./notFound.scss";
-
-const NotFound = () => {
-  return <div className="notFoundPage">NotFound</div>;
-};
-
-export default NotFound;
