@@ -1,17 +1,17 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./getConsultation.scss";
 
 interface IProps {
   text?: string;
   onClick?: VoidFunction;
 }
-const GetConsultation: React.FC<IProps> = ({
-  onClick,
-  text = "to get the consultation",
-}) => {
+const GetConsultation: React.FC<IProps> = ({ onClick, text }) => {
+  const { t } = useTranslation("common");
+
   return (
     <button className="button getConsultationBtn" onClick={onClick}>
-      {text}
+      {text || t("getConsultation")}
     </button>
   );
 };

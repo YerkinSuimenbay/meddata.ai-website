@@ -1,20 +1,13 @@
+import { useTranslation } from "react-i18next";
 import logo from "../../../assets/images/logo-meddata.svg";
 import { ReactComponent as Logo } from "../../../assets/images/logo-meddata.svg";
 import CarouselVertical from "../../../components/rest/carouserl/CarouselVertical";
 
-const texts = [
-  {
-    text: "Платформа для эффективного управления клиникой",
-  },
-  {
-    text: "Приложение для здоровья",
-  },
-  {
-    text: "Крипто-приложение для здоровых привычек ",
-  },
-];
-
 const Section1 = () => {
+  const { t } = useTranslation(["main"]);
+
+  const texts: string[] = t("section1", { returnObjects: true });
+
   return (
     <div className="section__one__background">
       <section className="section__one container">
@@ -26,9 +19,9 @@ const Section1 = () => {
         <div className="section__one__right">
           {/* <VerticalScrollingText /> */}
           <CarouselVertical>
-            {texts.map((text, i) => (
-              <p key={text.text} className="section__one__right__text">
-                {text.text}
+            {texts.map((text) => (
+              <p key={text} className="section__one__right__text">
+                {text}
               </p>
             ))}
           </CarouselVertical>

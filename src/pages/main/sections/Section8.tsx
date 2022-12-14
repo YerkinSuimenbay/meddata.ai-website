@@ -1,26 +1,38 @@
+import React from "react";
+import { useTranslation } from "react-i18next";
 import GetConsultation from "../../../components/buttons/GetConsultation/GetConsultation";
 import Ad from "../../../components/cards/Ad/Ad";
 
 const Section8 = () => {
+  const { t } = useTranslation(["main"], { keyPrefix: "section8" });
+
+  const texts = t("ad.text", { returnObjects: true }) as string[];
+
   return (
     <section className="section__eight container">
       <Ad
-        title={<>Free demo of the MedData platform</>}
+        title={<>{t("ad.title")}</>}
         text={
           <>
-            Let's demonstrate how the platform operates. In this example, you
-            will unlock the potential that will increase the efficiency of your
-            clinic.
+            {texts.map((text, i) => {
+              return (
+                <React.Fragment key={text}>
+                  {text}
+                  {i < texts.length - 1 && <br />}
+                </React.Fragment>
+              );
+            })}
           </>
         }
-        bottomButtonText="View demo"
+        bottomButtonText={t("ad.bottomButtonText")}
       />
       <div className="section__eight__slogan">
         <h2 className="section__heading">
-          <span style={{ textTransform: "uppercase" }}>control = income</span>{" "}
+          <span style={{ textTransform: "uppercase" }}>
+            {t("slogan.uppercase")}
+          </span>{" "}
           <br />
-          By connecting the MedData platform now, you will increase clinic sales
-          by 5 times
+          {t("slogan.rest")}
         </h2>
       </div>
       <GetConsultation />

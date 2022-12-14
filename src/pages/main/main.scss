@@ -222,6 +222,10 @@ $sectionOneLine2: 8em;
         // font-weight: $header_weight;
         // color: $color_blue_dark;
       }
+
+      .section__heading {
+        margin-bottom: 0;
+      }
     }
   }
 

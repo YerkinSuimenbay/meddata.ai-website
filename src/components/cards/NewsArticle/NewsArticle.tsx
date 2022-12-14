@@ -1,17 +1,26 @@
 import React from "react";
 import "./newsArticle.scss";
 import arrowRight from "../../../assets/images/arrowRight.svg";
+import { useTranslation } from "react-i18next";
+import { Lang } from "../../../types";
 
 interface IProps {
   poster: string;
   mediaLogo: string;
   title: string;
-  // className?: string;
-  // children: React.ReactNode;
 }
 
-// const NewsArticle: React.FC<IProps> = ({ textBadge, className, children }) => {
 const NewsArticle: React.FC<IProps> = ({ poster, mediaLogo, title }) => {
+  const { i18n } = useTranslation();
+
+  const readMoreButtonText = () => {
+    if (i18n.language === Lang.ru) {
+      return "читать далее";
+    }
+
+    return "read more";
+  };
+
   return (
     <div className="newsArticle">
       <div className="newsArticle__poster">
@@ -22,7 +31,7 @@ const NewsArticle: React.FC<IProps> = ({ poster, mediaLogo, title }) => {
       </div>
       <p className="newsArticle__title">{title}</p>
       <button className="newsArticle__readMoreBtn">
-        read more <img src={arrowRight} alt="arrow right" />
+        {readMoreButtonText()} <img src={arrowRight} alt="arrow right" />
       </button>
     </div>
   );

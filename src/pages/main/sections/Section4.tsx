@@ -5,91 +5,96 @@ import section4TopR from "../../../assets/images/section4TopR.svg";
 import section4BottomL from "../../../assets/images/section4BottomL.svg";
 import section4BottomR from "../../../assets/images/section4BottomR.svg";
 import section4BottomBlock from "../../../assets/images/section4BottomBlock.svg";
+import { useTranslation } from "react-i18next";
+import { Lang } from "../../../types";
 
 const Section4 = () => {
+  const { t, i18n } = useTranslation(["main"], { keyPrefix: "section4" });
+
+  const cards: { left: { text: string }[]; right: { text: string }[] } = t(
+    "cards",
+    {
+      returnObjects: true,
+    }
+  );
+
+  const renderHeading = () => {
+    if (i18n.language === Lang.ru) {
+      return (
+        <>
+          Как подключение платформы Meddata может{" "}
+          <span className="section__heading__blue2">улучшить показатели</span>{" "}
+          вашей клиники на <span className="section__heading__blue2">60%?</span>
+        </>
+      );
+    } else if (i18n.language === Lang.en) {
+      return (
+        <>
+          How can MedData platform connection{" "}
+          <span className="section__heading__blue2">
+            improve your clinic's performance by 60%?
+          </span>
+        </>
+      );
+    }
+  };
+
+  const renderCardImage = (
+    position: "TopLeft" | "TopRight" | "BottomLeft" | "BottomRight"
+  ) => {
+    if (position === "TopLeft")
+      return <img src={section4TopL} alt="traced layer" />;
+    if (position === "TopRight")
+      return <img src={section4TopR} alt="traced layer" />;
+    if (position === "BottomLeft")
+      return <img src={section4BottomL} alt="traced layer" />;
+    if (position === "BottomRight")
+      return <img src={section4BottomR} alt="traced layer" />;
+  };
+
   return (
     <section className="section__four container">
       <h2 className="section__heading section__four__heading">
-        How can MedData platform connection{" "}
-        <span className="section__heading__blue2">
-          improve
-          {/* TODO: do we need <br/>  */}
-          {/* <br /> */} your clinic's performance by 60%?
-        </span>
+        {renderHeading()}
       </h2>
       <div className="section__four__cards">
         <div className="section__four__cards__left">
-          <CardWithBadge
-            children={
-              <>
-                <img src={section4TopL} alt="traced layer" />
-                <p>
-                  individual platform customization for your clinic, for each
-                  employee and group of patients, which will help{" "}
-                  <b>management improvement by 45%</b>
-                </p>
-              </>
-            }
-          />
-          <CardWithBadge
-            children={
-              <>
-                <img src={section4BottomL} alt="traced layer" />
-                <p>
-                  <b>transparent financial analytics.</b> The MedData platform
-                  is able to find and prevent errors in management, predict the
-                  dynamics of the clinic's development
-                </p>
-              </>
-            }
-          />
+          {cards.left.map((card, index) => (
+            <CardWithBadge
+              key={card.text}
+              children={
+                <>
+                  {renderCardImage(index === 0 ? "TopLeft" : "TopRight")}
+                  <p dangerouslySetInnerHTML={{ __html: card.text }} />
+                </>
+              }
+            />
+          ))}
         </div>
         <div className="section__four__cards__right">
-          <CardWithBadge
-            children={
-              <>
-                <img src={section4TopR} alt="traced layer" />
-                <p>
-                  deep analytics: the platform is easy to connect to the
-                  services already working for you, thanks to the neural
-                  network, it analyzes the data of employees, warehouse,
-                  services, finances -{" "}
-                  <b>
-                    your manager will respond in time to the clinic shrinking
-                    processes
-                  </b>
-                </p>
-              </>
-            }
-          />
-          <CardWithBadge
-            children={
-              <>
-                <img src={section4BottomR} alt="traced layer" />
-                <p>
-                  a separate personal doctor's office will help you{" "}
-                  <b>track your work effectiveness and KPI</b>
-                </p>
-              </>
-            }
-          />
+          {cards.right.map((card, index) => (
+            <CardWithBadge
+              key={card.text}
+              children={
+                <>
+                  {renderCardImage(index === 0 ? "BottomLeft" : "BottomRight")}
+                  <p dangerouslySetInnerHTML={{ __html: card.text }} />
+                </>
+              }
+            />
+          ))}
         </div>
       </div>
+
       <div className="section__four__bottom">
         <CardWithBadge
           alignItems="center"
           children={
             <>
               <CustomList
-                title="The MedData platform is powered by artificial
-                intelligence, this will help:"
+                title={t("bottom.title") as string}
                 type="dot"
-                items={[
-                  "conduct transparent financial analytics",
-                  " predict the dynamics of the clinic development receive smart",
-                  "recommendations for optimizing business processes receive",
-                  "profit reporting and track the work of employees",
-                ]}
+                items={t("bottom.items", { returnObjects: true })}
               />
               <img
                 src={section4BottomBlock}

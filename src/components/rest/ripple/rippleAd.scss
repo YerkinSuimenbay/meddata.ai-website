@@ -1,0 +1,49 @@
+@import "../../../styles/constants";
+
+$w1: 22em;
+$coord1: -7.5em;
+$w2: 16em;
+$coord2: -4.5em;
+$w3: 10em;
+$coord3: -1.5em;
+$w4: 4em;
+$coord4: 1.5em;
+
+.rippleAd {
+  & > div {
+    border-radius: 50%;
+    background-color: #fcfcfc;
+    position: absolute;
+
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 81.5316px rgba(209, 217, 230, 0.58);
+  }
+
+  // position: relative;
+  .circle1 {
+    width: $w1;
+    height: $w1;
+    bottom: $coord1;
+    right: $coord1;
+  }
+
+  .circle2 {
+    width: $w2;
+    height: $w2;
+    bottom: $coord2;
+    right: $coord2;
+  }
+
+  .circle3 {
+    width: $w3;
+    height: $w3;
+    right: $coord3;
+    bottom: $coord3;
+  }
+  .circle4 {
+    width: $w4;
+    height: $w4;
+    right: $coord4;
+    bottom: $coord4;
+  }
+}

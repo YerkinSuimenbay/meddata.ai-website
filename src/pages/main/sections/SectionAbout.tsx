@@ -15,54 +15,61 @@ import posterPeople from "../../../assets/images/posterPeople.svg";
 import logoPeople from "../../../assets/images/logoPeople.svg";
 import posterNewTimes from "../../../assets/images/posterNewTimes.svg";
 import logoNewTimes from "../../../assets/images/logoNewTimes.svg";
+import { useTranslation } from "react-i18next";
 
 const SectionAbout = () => {
+  const { t } = useTranslation(["main"], { keyPrefix: "sectionAbout" });
+
+  const news: { media: string; title: string }[] = t("news", {
+    returnObjects: true,
+  });
+
+  const getPosterAndLogo = (media: string) => {
+    let poster = "";
+    let mediaLogo = "";
+    if (media === "Forbes") {
+      poster = posterForbes;
+      mediaLogo = logoForbes;
+    } else if (media === "Tengrinews") {
+      poster = posterTengrinews;
+      mediaLogo = logoTengrinews;
+    }
+    if (media === "Capital") {
+      poster = posterCapital;
+      mediaLogo = logoCapital;
+    }
+    if (media === "AstanaHub") {
+      poster = posterAstanaHub;
+      mediaLogo = logoAstanaHub;
+    }
+    if (media === "DE") {
+      poster = posterDE;
+      mediaLogo = logoDE;
+    }
+    if (media === "DB") {
+      poster = posterDB;
+      mediaLogo = logoDB;
+    }
+    if (media === "People") {
+      poster = posterPeople;
+      mediaLogo = logoPeople;
+    }
+    if (media === "NewTimes") {
+      poster = posterNewTimes;
+      mediaLogo = logoNewTimes;
+    }
+    return { poster, mediaLogo };
+  };
+
   return (
     <section className="section__about container">
       <h2 className="section__heading section__about__heading">
-        Mass Media about us
+        {t("heading")}
       </h2>
       <div className="section__about__news">
-        <NewsArticle
-          poster={posterForbes}
-          mediaLogo={logoForbes}
-          title="How a young Kazakh neurosurgeon created a $32 million startup"
-        />
-        <NewsArticle
-          poster={posterTengrinews}
-          mediaLogo={logoTengrinews}
-          title="Artificial intelligence develops medicine in Kazakhstan"
-        />
-        <NewsArticle
-          poster={posterCapital}
-          mediaLogo={logoCapital}
-          title="How can a startup be selected for the accelerator program of a US venture fund?"
-        />
-        <NewsArticle
-          poster={posterAstanaHub}
-          mediaLogo={logoAstanaHub}
-          title="Kazakh MedTech startup is scaling to the US, Italy and the UAE"
-        />
-        <NewsArticle
-          poster={posterDE}
-          mediaLogo={logoDE}
-          title="Astana Hub Awards were presented at the DIGITAL BRIDGE 2021"
-        />
-        <NewsArticle
-          poster={posterDB}
-          mediaLogo={logoDB}
-          title="Sleep well and take your medicine — get a token: Kazakh startup MedData claims to digitalize medicine"
-        />
-        <NewsArticle
-          poster={posterPeople}
-          mediaLogo={logoPeople}
-          title="Sheikhislam Sahi. A breakthrough in modern medicine"
-        />
-        <NewsArticle
-          poster={posterNewTimes}
-          mediaLogo={logoNewTimes}
-          title="A Kazakh startup won a $50,000 grant to launch a digitalization project for medicine abroad"
-        />
+        {news.map(({ media, title }) => (
+          <NewsArticle {...getPosterAndLogo(media)} title={title} />
+        ))}
       </div>
     </section>
   );

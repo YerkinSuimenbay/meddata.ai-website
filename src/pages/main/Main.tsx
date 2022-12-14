@@ -13,20 +13,20 @@ import Section8 from "./sections/Section8";
 import SectionAbout from "./sections/SectionAbout";
 import SectionQuestions from "./sections/SectionQuestions";
 
-const images = [
-  {
-    alt: "1",
-    src: "https://via.placeholder.com/800x350/0bf?text=image1",
-  },
-  {
-    alt: "2",
-    src: "https://via.placeholder.com/800x350/fb0?text=image2",
-  },
-  {
-    alt: "3",
-    src: "https://via.placeholder.com/800x350/b0f?text=image3",
-  },
-];
+// const images = [
+//   {
+//     alt: "1",
+//     src: "https://via.placeholder.com/800x350/0bf?text=image1",
+//   },
+//   {
+//     alt: "2",
+//     src: "https://via.placeholder.com/800x350/fb0?text=image2",
+//   },
+//   {
+//     alt: "3",
+//     src: "https://via.placeholder.com/800x350/b0f?text=image3",
+//   },
+// ];
 
 const Main: React.FC = () => {
   return (

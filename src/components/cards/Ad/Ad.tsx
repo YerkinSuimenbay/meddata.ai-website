@@ -1,4 +1,5 @@
 import React from "react";
+import RippleAd from "../../rest/ripple/RippleAd";
 import "./ad.scss";
 
 interface IProps {
@@ -14,14 +15,17 @@ const Ad: React.FC<IProps> = ({
   bottomButtonText,
 }) => {
   return (
-    <div className="ad">
-      {topButtonText && (
-        <button className="ad__top-button">{topButtonText}</button>
-      )}
+    <div className="ad__background">
+      <div className="ad">
+        {topButtonText && (
+          <button className="ad__top-button">{topButtonText}</button>
+        )}
 
-      <h2 className="ad__title">{title}</h2>
-      <p className="ad__text">{text}</p>
-      <button className="ad__bottom-button">{bottomButtonText}</button>
+        <h2 className="ad__title">{title}</h2>
+        <p className="ad__text">{text}</p>
+        <button className="ad__bottom-button">{bottomButtonText}</button>
+      </div>
+      <RippleAd />
     </div>
   );
 };

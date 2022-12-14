@@ -1,3 +1,320 @@
 {
-    
+  "section1": [
+    "Platform for efficient clinic management Health app Health-To-Ear",
+    "Приложение для здоровья",
+    "Крипто-приложение для здоровых привычек"
+  ],
+  "section2": {
+    "slogan": "MedData is a medical platform, for transparent and efficient clinic management",
+    "getConsultation": "free consultation"
+  },
+  "section3": {
+    "cards": [
+      {
+        "text": "of business and work processes are not <br /> digitized",
+        "badgeText": "75%"
+      },
+      {
+        "text": "annual clinics losses due to lack of <br /> digitization",
+        "badgeText": "from 8 to 20%"
+      },
+      {
+        "text": "cannot implement online services to improve <br /> service within a clinic",
+        "badgeText": "87%"
+      },
+      {
+        "text": "billion a year clinics losses due to cash <br /> payments",
+        "badgeText": "100 млрд $"
+      }
+    ]
+  },
+  "section4": {
+    "cards": {
+      "left": [
+        {
+          "text": "individual platform customization for your clinic, for each employee and group of patients, which will help <b>management improvement by 45%</b>"
+        },
+        {
+          "text": "<b>transparent financial analytics.</b> The MedData platform is able to find and prevent errors in management, predict the dynamics of the clinic's development"
+        }
+      ],
+      "right": [
+        {
+          "text": "deep analytics: the platform is easy to connect to the services already working for you, thanks to the neural network, it analyzes the data of employees, warehouse, services, finances -  <b>your manager will respond in time to the clinic shrinking processes</b>"
+        },
+        {
+          "text": "a separate personal doctor's office will help you <b>track your work effectiveness and KPI</b>"
+        }
+      ]
+    },
+    "bottom": {
+      "title": "The MedData platform is powered by artificial intelligence, this will help:",
+      "items": [
+        "conduct transparent financial analytics",
+        "predict the dynamics of the clinic development receive smart",
+        "recommendations for optimizing business processes receive",
+        "profit reporting and track the work of employees"
+      ]
+    }
+  },
+  "section5": {
+    "ad": {
+      "topButtonText": "free consultation",
+      "title": "Increase the effectiveness of the clinic within 2 months",
+      "text": [
+        "By implementing the MedData platform.",
+        "Leave a request now for a free consultation."
+      ],
+      "bottomButtonText": "To get the advice"
+    }
+  },
+  "section6": {
+    "cards": [
+      {
+        "text": "Personally customizable patient admission protocols. MedData learns and at the same time prevents errors in the reception protocols.",
+        "title": "Reception automation"
+      },
+      {
+        "text": "Using data from the treatment constructor and medical monitoring, MedData is able to analyze the treatment and the patient's condition online.",
+        "title": "Deep Analytics"
+      },
+      {
+        "text": "Flexible adjustment of the treatment protocol, individual adjustment by patient groups, adjustment of scales and medical monitoring. Thus, the quality of treatment is improved by 70%.",
+        "title": "Treatment Constructor"
+      }
+    ]
+  },
+  "section7": {
+    "cards": {
+      "left": [
+        {
+          "text": "We predict and prevent errors in management, identify the dynamics of the clinic's development and help in online management, offering smart recommendations for optimizing business processes.",
+          "title": "We find the perfect solution"
+        },
+        {
+          "text": "We sign a non-disclosure agreement with you",
+          "title": "We sign a non-disclosure agreement with you"
+        },
+        {
+          "text": "After implementation, you will not be left alone with the platform. We conduct an audit on the platform maintaining quality every 3 months, the work of automation and the addition of amplifying tools",
+          "title": "Post-support and audit"
+        }
+      ],
+      "right": [
+        {
+          "text": "We will implement the MedData platform for your clinics, set up a service constructor, clinics, a personal account for a doctor, manager, and patient. So that employees can focus only on the most important",
+          "title": "We automate routine processes"
+        },
+        {
+          "text": "The patients database you have developed, the internal data of physicians and your clinic will be protected: no one will be able to download it without permission",
+          "title": "We will keep your data safe"
+        },
+        {
+          "text": "The list of works and the deadlines for their implementation are specified in the contract with the terms of reference agreed with you",
+          "title": "Fast integration"
+        }
+      ]
+    }
+  },
+  "section8": {
+    "ad": {
+      "title": "Free demo of the MedData platform",
+      "text": [
+        "Let's demonstrate how the platform operates. In this example, you will unlock the potential that will increase the efficiency of your clinic."
+      ],
+      "bottomButtonText": "View demo"
+    },
+    "slogan": {
+      "uppercase": "control = income",
+      "rest": "By connecting the MedData platform now, you will increase clinic sales by 5 times"
+    }
+  },
+  "sectionAbout": {
+    "heading": "Mass Media about us",
+    "news": [
+      {
+        "media": "Forbes",
+        "title": "How a young Kazakh neurosurgeon created a $32 million startup"
+      },
+      {
+        "media": "Tengrinews",
+        "title": "Artificial intelligence develops medicine in Kazakhstan"
+      },
+      {
+        "media": "Capital",
+        "title": "How can a startup be selected for the accelerator program of a US venture fund?"
+      },
+      {
+        "media": "AstanaHub",
+        "title": "Kazakh MedTech startup is scaling to the US, Italy and the UAE"
+      },
+      {
+        "media": "DE",
+        "title": "Astana Hub Awards were presented at the DIGITAL BRIDGE 2021"
+      },
+      {
+        "media": "DB",
+        "title": "Sleep well and take your medicine — get a token: Kazakh startup MedData claims to digitalize medicine"
+      },
+      {
+        "media": "People",
+        "title": "Sheikhislam Sahi. A breakthrough in modern medicine"
+      },
+      {
+        "media": "NewTimes",
+        "title": "A Kazakh startup won a $50,000 grant to launch a digitalization project for medicine abroad"
+      }
+    ]
+  },
+  "sectionQuestions": {
+    "heading": "Still have questions?",
+    "questions": [
+      {
+        "title": "About the platform",
+        "subquestions": [
+          {
+            "title": "1. What is MedData?",
+            "answer": "MedData AI is an artificial intelligence-based medical platform that give opportunity to: the owner: to manage the clinic effectively; the physician: to treat patients successfully; the patient: to receive loyal service, as well as to track the health dynamics."
+          },
+          {
+            "title": "2. Who is your platform for?",
+            "answer": "The platform is designed for large and small medical institutions, as it has a flexible constructor for creating functional departments."
+          }
+        ]
+      },
+      {
+        "title": "Profit",
+        "subquestions": [
+          {
+            "title": "1. How do you improve the efficiency of clinic management?",
+            "answer": "MedData gives you complete statistics - from the workload of the doctor to the daily expenses and income of the clinic. You can identify and focus on your weak points with help of this data."
+          },
+          {
+            "title": "2. How do you increase the clinic profitability?",
+            "answer": {
+              "line1": "The clinic profitability is increased due to:",
+              "lis": [
+                "• tracking of all financial transactions that will help you to eliminate “gray” schemes;",
+                "• monitoring the physicians' performance;",
+                "• reporting automation resulting in more patients which a physician will be able to see;",
+                "• treatment progress tracking that will increase patient loyalty and positively influence their recommendations and return visits."
+              ]
+            }
+          },
+          {
+            "title": "3. Will the platform track cash payments or Kaspi installment payments?",
+            "answer": "MedData allows you to track all financial transactions, which prevents payments past the checkout. In the near future, we plan to connect Kaspi by installments."
+          }
+        ]
+      },
+      {
+        "title": "For patients",
+        "subquestions": [
+          {
+            "title": "How is patient progress monitored?",
+            "answer": "The platform monitors the treatment dynamics with patient filling out of questionnaires compiled by the physician depending on the course of treatment. The patient also can connect a smart watch that tracks heart rate, activity time and sleep quality."
+          }
+        ]
+      },
+      {
+        "title": "Advantages",
+        "subquestions": [
+          {
+            "title": "1. How are you better than your competitors?",
+            "answer": {
+              "line1": "The solutions presented on the market cover only a part of the tasks, they are difficult to adjust to many of the clinic business processes.",
+              "line2": "The MedData medical platform is the most flexible out-of-the-box solution that resolves 3 main issues:",
+              "lis": [
+                "• effective clinic management – for a manager;",
+                "• effective patients treatment – for a physician;",
+                "• complete health management – for a patient."
+              ],
+              "line3": "MedData makes the opportunity to track the treatment dynamics by a physician and to receive recommendations from a physician by a patient during treatment."
+            }
+          },
+          {
+            "title": "2. Is there integration with the call center?",
+            "answer": {
+              "line1": "Based on the initial survey, the platform offers the patient to take the necessary tests and make an appointment with a doctor, in this regard, there is no need for MedData integration with the call center.",
+              "line2": "After the doctor's recommendations, the patient receives a notification in the MedData application, in the “My treatment tracking” option, where he can see all the physician prescriptions, and will also receive timely reminders which will allow him to perform the prescribed procedures in time."
+            }
+          },
+          {
+            "title": "3. How are payments made?",
+            "answer": "Payment passes through the patient's mobile application, as a result, the need for a cashier's position disappears which eliminates the possibility of paying past the cashier."
+          },
+          {
+            "title": "4. Do you have access to the patient's ID card?",
+            "answer": "Yes, it is possible to search for a card by ID. And access to it can be got in one click from the patient."
+          }
+        ]
+      },
+      {
+        "title": "How to work with MedData",
+        "subquestions": [
+          {
+            "title": "1. Will it be difficult for doctors and patients to use?",
+            "answer": "MedData is an innovative, fast and easy to use platform."
+          },
+          {
+            "title": "2. Where will the database be stored?",
+            "answer": "All information will be stored on the Cloud storage."
+          },
+          {
+            "title": "3. If a patient comes in with an old card, does he have to get a new one?",
+            "answer": "MedData stores the patient's medical and treatment history. Access to the card can be requested from the patient."
+          },
+          {
+            "title": "4. How long will the integration run?",
+            "answer": {
+              "line1": "Integration is an individual process and depends on the number of users, modules and branches. On average, the process takes one to two weeks",
+              "line2": "After the platform implementation, MedData assigns to you a manager who will supervise you during the integration."
+            }
+          },
+          {
+            "title": "5. What are the minimum specifications required by the platform?",
+            "answer": "The mobile application is suitable for any smart phone, and managers and physicians can use the platform through any PC with Internet access."
+          },
+          {
+            "title": "6. What will the platform for physicians and patients look like?",
+            "answer": {
+              "line1": "The platform is available for managers and doctors in both full and mobile versions.",
+              "line2": "An application that can be downloaded from PlayMarket and AppStore is available for the patient."
+            }
+          },
+          {
+            "title": "7. Will there be advertising inside the application? ",
+            "answer": "MedData has advertising for doctors and clinics to attract new patients and increase the loyalty of current ones. The platform analyzes advertising accounts, displaying their effectiveness."
+          }
+        ]
+      },
+      {
+        "title": "Cost",
+        "subquestions": [
+          {
+            "title": "1. How much does MedData cost?",
+            "answer": {
+              "line1": "You use only the features you need with MedData and do not overpay.",
+              "line2": "The system automatically calculates the tariff cost, since the functionality and number of employees are different for everyone."
+            }
+          },
+          {
+            "title": "2. Do you have a test period?",
+            "answer": "We believe that our innovative platform will be useful for you, so we offer you to take advantage of the test period."
+          },
+          {
+            "title": "3. How much does it cost to implement a database into a platform?",
+            "answer": {
+              "line1": "The database is unloaded in two ways:",
+              "lis": [
+                "• independently, following the attached detailed instructions;",
+                "• with the help of a manager, having agreed on the volume of material to be integrated."
+              ],
+              "line2": "The cost is formed depending on the volume of services provided."
+            }
+          }
+        ]
+      }
+    ]
+  }
 }

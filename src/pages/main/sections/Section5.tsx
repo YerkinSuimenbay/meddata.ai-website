@@ -1,22 +1,30 @@
+import React from "react";
+import { useTranslation } from "react-i18next";
 import Ad from "../../../components/cards/Ad/Ad";
 
 const Section5 = () => {
+  const { t } = useTranslation(["main"], { keyPrefix: "section5" });
+
+  const texts = t("ad.text", { returnObjects: true }) as string[];
+
   return (
     <section className="section__five container">
       <Ad
-        topButtonText="free consultation"
-        title={
-          <>
-            Increase the effectiveness of <br /> the clinic within 2 months
-          </>
-        }
+        topButtonText={t("ad.topButtonText") as string}
+        title={<>{t("ad.title")}</>}
         text={
           <>
-            By implementing the MedData platform. <br />
-            Leave a request now for a free consultation.
+            {texts.map((text, i) => {
+              return (
+                <React.Fragment key={text}>
+                  {text}
+                  {i < texts.length - 1 && <br />}
+                </React.Fragment>
+              );
+            })}
           </>
         }
-        bottomButtonText="To get the advice"
+        bottomButtonText={t("ad.bottomButtonText")}
       />
     </section>
   );
