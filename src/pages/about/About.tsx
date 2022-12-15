@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import "./about.scss";
 
 import Section1 from "./sections/Section1";
@@ -12,7 +13,10 @@ import Section8 from "./sections/Section8";
 const About = () => {
   return (
     <div className="about__page">
-      <Section1 />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Section1 />
+      </Suspense>
+      {/* <Section1 /> */}
       <Section2 />
       <Section3 />
       <Section4 />

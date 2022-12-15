@@ -137,18 +137,23 @@ const CarouselVertical: React.FC<IProps> = ({
   }, [t]);
 
   const slides = useMemo(() => {
+    const toggleClass = (index: number) => {
+      if (index + 1 === current) return "IsActive";
+      if (index + 2 === current) return "IsPrev";
+
+      if (current === 1) {
+        if (index === children.length - 1) return "IsPrev";
+      }
+
+      return "";
+    };
+
     if (children.length > 1) {
       let items = Children.map(children, (child, index) => (
         <li
           style={{ height: maxHeight }}
           key={index}
-          className={`Slide ${
-            index + 1 === current
-              ? "IsActive"
-              : index + 2 === current
-              ? "IsPrev"
-              : ""
-          }`}
+          className={`Slide ${toggleClass(index)}`}
         >
           {child}
         </li>

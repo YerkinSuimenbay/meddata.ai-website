@@ -27,38 +27,54 @@ const SectionAbout = () => {
   const getPosterAndLogo = (media: string) => {
     let poster = "";
     let mediaLogo = "";
+    let link = "";
     if (media === "Forbes") {
       poster = posterForbes;
       mediaLogo = logoForbes;
+      link =
+        "https://forbes.kz/process/technologies/kak_molodoy_kazahskiy_neyrohirurg_sozdal_startap_s_otsenkoy_v_32_mln/";
     } else if (media === "Tengrinews") {
       poster = posterTengrinews;
       mediaLogo = logoTengrinews;
+      link =
+        "https://tengrinews.kz/conference/iskusstvennyiy-intellekt-razvivaet-meditsinu-kazahstana-418/";
     }
     if (media === "Capital") {
       poster = posterCapital;
       mediaLogo = logoCapital;
+      link =
+        "https://kapital.kz/business/105154/kak-startapu-proyti-otbor-v-akseleratsionnuyu-programmu-fonda-ssha.html";
     }
     if (media === "AstanaHub") {
       poster = posterAstanaHub;
       mediaLogo = logoAstanaHub;
+      link =
+        "https://astanahub.com/article/kazakhstanskii-medtech-startap-masshtabiruetsia-v-ssha-italiiu-i-oae";
     }
     if (media === "DE") {
       poster = posterDE;
       mediaLogo = logoDE;
+      link =
+        "https://digitaleast.kz/news/na-forume-digital-bridge-2021-vruchili-premiyu-astana-hub-awards";
     }
     if (media === "DB") {
       poster = posterDB;
       mediaLogo = logoDB;
+      link =
+        "https://digitalbusiness.kz/2022-08-10/horosho-pospal-i-prinyal-lekarstvo-poluchi-token-kazahstanskij-startap-meddata-zamahnulsya-na-czifrovizacziyu-medicziny/";
     }
     if (media === "People") {
       poster = posterPeople;
       mediaLogo = logoPeople;
+      link = "https://www.tpeople.online/post/180522";
     }
     if (media === "NewTimes") {
       poster = posterNewTimes;
       mediaLogo = logoNewTimes;
+      link =
+        "https://newtimes.kz/obshchestvo/141581-kazakhstanets-vyigral-grant-50-tys-dlia-zapuska-proekta-po-tsifrovizatsii-meditsiny-za-rubezhom";
     }
-    return { poster, mediaLogo };
+    return { poster, mediaLogo, link };
   };
 
   return (

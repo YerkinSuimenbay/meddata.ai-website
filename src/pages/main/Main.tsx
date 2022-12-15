@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "./main.scss";
 import "./verticalScrollingText.scss";
 
@@ -17,7 +17,9 @@ const Main: React.FC = () => {
   return (
     <>
       <div className="home__page">
-        <Section1 />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Section1 />
+        </Suspense>
         <Section2 />
         <Section3 />
         <Section4 />

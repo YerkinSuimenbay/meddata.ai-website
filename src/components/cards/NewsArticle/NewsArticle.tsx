@@ -5,13 +5,19 @@ import { useTranslation } from "react-i18next";
 import { Lang } from "../../../types";
 
 interface IProps {
+  title: string;
   poster: string;
   mediaLogo: string;
-  title: string;
+  link: string;
 }
 
-const NewsArticle: React.FC<IProps> = ({ poster, mediaLogo, title }) => {
+const NewsArticle: React.FC<IProps> = ({ poster, mediaLogo, title, link }) => {
   const { i18n } = useTranslation();
+  // const = useNa
+
+  const handleClick = () => {
+    window.open(link);
+  };
 
   const readMoreButtonText = () => {
     if (i18n.language === Lang.ru) {
@@ -30,7 +36,7 @@ const NewsArticle: React.FC<IProps> = ({ poster, mediaLogo, title }) => {
         </div>
       </div>
       <p className="newsArticle__title">{title}</p>
-      <button className="newsArticle__readMoreBtn">
+      <button className="newsArticle__readMoreBtn" onClick={handleClick}>
         {readMoreButtonText()} <img src={arrowRight} alt="arrow right" />
       </button>
     </div>
