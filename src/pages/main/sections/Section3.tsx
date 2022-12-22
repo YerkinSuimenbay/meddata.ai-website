@@ -36,7 +36,7 @@ const Section3 = () => {
         {cards.map((card) => (
           <CardWithBadge
             key={card.text}
-            children={<p dangerouslySetInnerHTML={{ __html: card.text }}></p>}
+            children={<p dangerouslySetInnerHTML={{ __html: card.text }} className="capitalize-first-letter"></p>}
             textBadge={card.badgeText}
           />
         ))}

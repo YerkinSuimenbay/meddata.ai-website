@@ -37,7 +37,8 @@ const NewsArticle: React.FC<IProps> = ({ poster, mediaLogo, title, link }) => {
       </div>
       <p className="newsArticle__title">{title}</p>
       <button className="newsArticle__readMoreBtn" onClick={handleClick}>
-        {readMoreButtonText()} <img src={arrowRight} alt="arrow right" />
+        <span className="capitalize-first-letter">{readMoreButtonText()}</span>{" "}
+        <img src={arrowRight} alt="arrow right" />
       </button>
     </div>
   );

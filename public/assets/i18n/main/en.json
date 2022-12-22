@@ -15,16 +15,16 @@
         "badgeText": "75%"
       },
       {
-        "text": "annual clinics losses due to lack of <br /> digitization",
-        "badgeText": "from 8 to 20%"
+        "text": "up to 40% of clinics lose annually due to payment by the cash register",
+        "badgeText": "From 8 to 20%"
       },
       {
-        "text": "cannot implement online services to improve <br /> service within a clinic",
-        "badgeText": "87%"
+        "text": "they lose due to the lack of employment analytics of the department, doctors and clinics",
+        "badgeText": "30%"
       },
       {
-        "text": "billion a year clinics losses due to cash <br /> payments",
-        "badgeText": "100 млрд $"
+        "text": "have not implemented transparent analytics and service for patient retention and management",
+        "badgeText": "60%"
       }
     ]
   },
@@ -126,11 +126,11 @@
     },
     "slogan": {
       "uppercase": "control = income",
-      "rest": "By connecting the MedData platform now, you will increase clinic sales by 5 times"
+      "rest": "By connecting the MedData platform now, you <br /> will increase clinic sales by 5 times"
     }
   },
   "sectionAbout": {
-    "heading": "Mass Media about us",
+    "heading": "Mass Media",
     "news": [
       {
         "media": "Forbes",
@@ -158,7 +158,7 @@
       },
       {
         "media": "People",
-        "title": "Sheikhislam Sahi. A breakthrough in modern medicine"
+        "title": "Sheikhislam Sakhi. A breakthrough in modern medicine"
       },
       {
         "media": "NewTimes",

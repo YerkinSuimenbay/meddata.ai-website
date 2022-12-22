@@ -78,14 +78,6 @@
         "Participated in the creation of blockchain technology in the fintech sector"
       ]
     },
-    "CMO": {
-      "name": "Yana Ten",
-      "position": "CMO",
-      "details": [
-        "An expert with 7 years of marketing experience",
-        "Built strategies for startups in such regions as the UAE, the UK, Indonesia and the CIS"
-      ]
-    },
     "Neurosurgeon": {
       "name": "Aziz Akkaev",
       "position": "Neurosurgeon",
@@ -106,14 +98,6 @@
       "position": "CPO",
       "details": [
         "Participated in the development of Zood Superapp and Alfabank"
-      ]
-    },
-    "CFO": {
-      "name": "Sadvakas Sanjar",
-      "position": "CFO",
-      "details": [
-        "He has more than 7 years of audit experience in the \"big Four\"",
-        "At various times, he headed the reporting and control department, as well as financial departments in various industries"
       ]
     }
   },

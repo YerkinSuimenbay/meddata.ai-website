@@ -1,0 +1,62 @@
+@import "../../../styles/constants";
+
+.lang {
+  position: relative;
+  width: 2.5em;
+
+  &__selected {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-size: 1em;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 115%;
+
+    li {
+      font-size: 1em;
+      padding: 0.5em;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.3s linear;
+
+      &:hover {
+        background-color: $color_blue_1;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.langHorizontal {
+  &__options {
+    display: flex;
+    gap: 1em;
+    font-size: 1.2em;
+    padding-left: 0.5em;
+
+    li {
+      background: white;
+      /* color: aliceblue; */
+      padding: 0.2em 0.5em;
+      border-radius: 5px;
+      color: black;
+
+      &.active {
+        // opacity: 0.7;
+        background-color: $color_blue_2;
+        color: #fff;
+      }
+    }
+  }
+}

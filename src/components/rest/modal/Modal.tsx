@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./modal.scss";
 // import plus from "../../../assets/images/plus.svg";
 import { ReactComponent as Plus } from "../../../assets/images/plus.svg";

@@ -22,11 +22,9 @@ const Section7 = () => {
     ProductDirector = "ProductDirector",
     LegalOfficer = "LegalOfficer",
     TechnicalDirector = "TechnicalDirector",
-    CMO = "CMO",
     Neurosurgeon = "Neurosurgeon",
     HeadOfDesign = "HeadOfDesign",
     CPO = "CPO",
-    CFO = "CFO",
   }
 
   const getProfile = (position: Position) => {
@@ -35,11 +33,10 @@ const Section7 = () => {
     if (position === Position.ProductDirector) return ProductDirector;
     if (position === Position.LegalOfficer) return LegalOfficer;
     if (position === Position.TechnicalDirector) return TechnicalDirector;
-    if (position === Position.CMO) return CMO;
     if (position === Position.Neurosurgeon) return Neurosurgeon;
     if (position === Position.HeadOfDesign) return HeadOfDesign;
     if (position === Position.CPO) return CPO;
-    return CFO;
+    return "";
   };
 
   return (

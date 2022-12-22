@@ -18,7 +18,7 @@ i18n
     supportedLngs: ["en", "kz", "ru"],
     fallbackLng: "en",
     // disable for production
-    debug: true,
+    // debug: true,
     ns: ["main", "about", "news", "career"],
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default

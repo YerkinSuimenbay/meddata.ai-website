@@ -2,14 +2,24 @@
   "navbar": {
     "main": "Main",
     "about": "About us",
+    "contacts": "Contacts",
     "news": "News",
     "careers": "Careers"
   },
   "test": "tesefsfesfst",
   "getConsultation": "to get the consultation",
+  "consultationModal": {
+    "title": "Leave your details and we will contact you as soon as possible",
+    "fio": "Your last name, first name",
+    "fioPlaceholder": "Хорн Александр Анатольевич",
+    "contactInfo": "Contact details",
+    "contactInfoPlaceholder": "+7 777 777 77 77",
+    "submit": "Submit your application"
+  },
   "footer": {
     "phone": "Hotline number",
-    "email": "Email address",
+    "email": "email",
+    "contactUs": "Contact us",
     "privacyPolicy": [
       "By leaving data on this site, you agree to the processing of personal data in compliance with the privacy policy in accordance with subparagraph 7 of paragraph 1 of Article 27-1 of the Law of the Republic of Kazakhstan dated May 21, 2013 “On personal data and their protection”",
       "Privacy Policy"

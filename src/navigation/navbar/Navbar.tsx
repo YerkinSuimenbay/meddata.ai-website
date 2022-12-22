@@ -1,41 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
-import "./navbar.scss";
-import logoMeddata from "../../assets/images/logo-meddata.svg";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 import i18next from "i18next";
-import Lang from "../../components/rest/Lang/Lang";
-import { ReactComponent as BurgerMenu } from "../../assets/images/BurgerMenu.svg";
-
-// import { GiHamburgerMenu } from "react-icons/gi";
 import { RxHamburgerMenu } from "react-icons/rx";
-import SidebarMui from "./SidebarMui";
+import "./navbar.scss";
 
-const links = [
-  {
-    path: "/",
-    label: "Main",
-    name: "main",
-  },
-  {
-    path: "/about",
-    label: "About us",
-    name: "about",
-  },
-  // {
-  //   path: "/news",
-  //   label: "News",
-  //   name: "news",
-  // },
-  // {
-  //   path: "/careers",
-  //   label: "Careers",
-  //   name: "careers",
-  // },
-];
+import logoMeddata from "../../assets/images/logo-meddata.svg";
+import Lang from "../../components/rest/lang/Lang";
+import SidebarMui from "../sidebar/SidebarMui";
+import { links } from "../links";
 
 export const Navbar: React.FC = () => {
-  const { t, i18n } = useTranslation(["common"], { keyPrefix: "navbar" });
+  const { t } = useTranslation(["common"], { keyPrefix: "navbar" });
   const [openSidebar, setOpenSidebar] = useState(false);
 
   useEffect(() => {
@@ -54,22 +30,43 @@ export const Navbar: React.FC = () => {
           <div className="navbar__logo">
             <NavLink to="">
               <img src={logoMeddata} alt="meddata logo" />
+              MedData.Ai
             </NavLink>
           </div>
           <div className="navbar__links">
-            {links.map((link) => (
-              <NavLink
-                key={link.path}
-                to={link.path}
-                className={({ isActive }) =>
-                  isActive ? "active_link" : undefined
-                }
-              >
-                {/* {link.label} */}
-                {t(link.name)}
-                {/* {t("test")} */}
-              </NavLink>
-            ))}
+            {links.map((link) => {
+              if (link.name === "contacts") {
+                return (
+                  <a
+                    key={link.path}
+                    href="contacts"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const scrollToBottom = () => {
+                        window.scrollTo({
+                          top: document.documentElement.scrollHeight,
+                          behavior: "smooth",
+                        });
+                      };
+                      scrollToBottom();
+                    }}
+                  >
+                    {t(link.name)}
+                  </a>
+                );
+              }
+              return (
+                <NavLink
+                  key={link.path}
+                  to={link.path}
+                  className={({ isActive }) =>
+                    isActive ? "active_link" : undefined
+                  }
+                >
+                  {t(link.name)}
+                </NavLink>
+              );
+            })}
           </div>
           <div className="navbar__lang">
             <Lang />
@@ -85,7 +82,6 @@ export const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* {openSidebar && <Sidebar />} */}
       <SidebarMui open={openSidebar} onClose={() => setOpenSidebar(false)} />
     </>
   );

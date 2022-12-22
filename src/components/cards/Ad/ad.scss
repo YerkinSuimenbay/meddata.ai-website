@@ -3,7 +3,7 @@
 .ad__background {
   position: relative;
   overflow: hidden;
-  background: #017bfe;
+  background: $color_blue_2;
   box-shadow: $box_shadow_ad;
 
   box-shadow: $box_shadow_card;
@@ -21,6 +21,7 @@
     padding: 0.5em 1em;
     width: fit-content;
     border-radius: 10px;
+    text-transform: uppercase;
   }
 
   &__title {

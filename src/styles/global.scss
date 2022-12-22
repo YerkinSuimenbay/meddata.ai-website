@@ -93,6 +93,13 @@ b {
   }
 }
 
+.capitalize-first-letter {
+  text-transform: lowercase;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
 @media screen and (max-width: $mobile) {
   html {
     font-size: 8px !important;

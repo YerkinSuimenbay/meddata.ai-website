@@ -25,15 +25,13 @@ const Section8 = () => {
           </>
         }
         bottomButtonText={t("ad.bottomButtonText")}
+        onClickBottomButton={() => {}}
       />
       <div className="section__eight__slogan">
-        <h2 className="section__heading">
-          <span style={{ textTransform: "uppercase" }}>
-            {t("slogan.uppercase")}
-          </span>{" "}
-          <br />
-          {t("slogan.rest")}
+        <h2 className="section__heading" style={{ textTransform: "uppercase" }}>
+          {t("slogan.uppercase")}
         </h2>
+        <p dangerouslySetInnerHTML={{ __html: t("slogan.rest") }} />
       </div>
       <GetConsultation />
     </section>

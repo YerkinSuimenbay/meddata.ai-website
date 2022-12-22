@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Ad from "../../../components/cards/Ad/Ad";
+import ConsultationModal from "../../../components/rest/modal/ConsultationModal";
 
 const Section5 = () => {
   const { t } = useTranslation(["main"], { keyPrefix: "section5" });
+  const [openModal, setOpenModal] = useState(false);
+
+  const openConsultationModal = () => {
+    console.log("open");
+    setOpenModal(true);
+  };
+
+  const closeConsultationModal = () => setOpenModal(false);
 
   const texts = t("ad.text", { returnObjects: true }) as string[];
 
@@ -25,7 +34,11 @@ const Section5 = () => {
           </>
         }
         bottomButtonText={t("ad.bottomButtonText")}
+        bottomButtonUppercase={false}
+        onClickTopButton={openConsultationModal}
+        onClickBottomButton={openConsultationModal}
       />
+      <ConsultationModal open={openModal} close={closeConsultationModal} />
     </section>
   );
 };

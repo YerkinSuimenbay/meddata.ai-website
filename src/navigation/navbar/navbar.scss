@@ -20,6 +20,12 @@
 
   &__logo a {
     display: flex;
+    align-items: center;
+    column-gap: .5em;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2em;
+
     img {
       height: 60px;
       width: 60px;

@@ -64,8 +64,11 @@ const Section4 = () => {
               key={card.text}
               children={
                 <>
-                  {renderCardImage(index === 0 ? "TopLeft" : "TopRight")}
-                  <p dangerouslySetInnerHTML={{ __html: card.text }} />
+                  {renderCardImage(index === 0 ? "TopLeft" : "BottomLeft")}
+                  <p
+                    dangerouslySetInnerHTML={{ __html: card.text }}
+                    className="capitalize-first-letter"
+                  />
                 </>
               }
             />
@@ -77,8 +80,11 @@ const Section4 = () => {
               key={card.text}
               children={
                 <>
-                  {renderCardImage(index === 0 ? "BottomLeft" : "BottomRight")}
-                  <p dangerouslySetInnerHTML={{ __html: card.text }} />
+                  {renderCardImage(index === 0 ? "TopRight" : "BottomRight")}
+                  <p
+                    dangerouslySetInnerHTML={{ __html: card.text }}
+                    className="capitalize-first-letter"
+                  />
                 </>
               }
             />
