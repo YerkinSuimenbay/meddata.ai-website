@@ -3,17 +3,24 @@ import "./newsArticle.scss";
 import arrowRight from "../../../assets/images/arrowRight.svg";
 import { useTranslation } from "react-i18next";
 import { Lang } from "../../../types";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface IProps {
   title: string;
   poster: string;
+  posterPlaceholder: string;
   mediaLogo: string;
   link: string;
 }
 
-const NewsArticle: React.FC<IProps> = ({ poster, mediaLogo, title, link }) => {
+const NewsArticle: React.FC<IProps> = ({
+  poster,
+  mediaLogo,
+  title,
+  link,
+  posterPlaceholder,
+}) => {
   const { i18n } = useTranslation();
-  // const = useNa
 
   const handleClick = () => {
     window.open(link);
@@ -30,7 +37,13 @@ const NewsArticle: React.FC<IProps> = ({ poster, mediaLogo, title, link }) => {
   return (
     <div className="newsArticle">
       <div className="newsArticle__poster">
-        <img src={poster} alt="news article poster" />
+        <LazyLoadImage
+          src={poster}
+          alt="news article poster"
+          placeholderSrc={posterPlaceholder}
+          effect="blur"
+        />
+        {/* <img src={poster} alt="news article poster" /> */}
         <div className="newsArticle__poster__mediaName">
           <img src={mediaLogo} alt="media logo" />
         </div>

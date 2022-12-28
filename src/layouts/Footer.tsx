@@ -13,7 +13,40 @@ const Footer = () => {
   const { t } = useTranslation("common", { keyPrefix: "footer" });
   const [openModal, setOpenModal] = useState(false);
 
-  const openConsultationModal = () => setOpenModal(true);
+  // const openConsultationModal = () => setOpenModal(true);
+  const openConsultationModal = () => {
+    // setOpenModal(true);
+    
+    (function (w, d, u) {
+      console.log("CLICKED");
+      var s = d.createElement("script");
+      s.async = true;
+      s.src = u + "?" + ((Date.now() / 180000) | 0);
+      var h = d.getElementsByTagName("script")[0];
+      h!.parentNode!.insertBefore(s, h);
+    })(
+      window,
+      document,
+      // "https://cdn-ru.bitrix24.ru/b21027398/c...4.js");
+      "https://cdn-ru.bitrix24.ru/b21027398/crm/form/loader_4.js%27"
+    );
+    // document
+    // <script data-b24-form="inline/4/32qite" data-skip-moving="true">
+    //   (function (w, d, u) {
+    //     var s = d.createElement("script");
+    //     s.async = true;
+    //     s.src = u + "?" + ((Date.now() / 180000) | 0);
+    //     var h = d.getElementsByTagName("script")[0];
+    //     h.parentNode.insertBefore(s, h);
+    //   })(
+    //     window,
+    //     document,
+    //     // "https://cdn-ru.bitrix24.ru/b21027398/c...4.js");
+    //     "https://cdn-ru.bitrix24.ru/b21027398/crm/form/loader_4.js%27"
+    //   );
+    //   // (https://cdn-ru.bitrix24.ru/b21027398/crm/form/loader_4.js%27));
+    // </script>
+  };
   const closeConsultationModal = () => setOpenModal(false);
 
   return (
@@ -34,7 +67,9 @@ const Footer = () => {
               AI Systems LTD
               {/* <br /> {t("phone")}: +7 707 700 0550 */}
               <br /> {t("email")}: corporate@meddata-ai.app
-              <p onClick={openConsultationModal} className="footer__contactUs">{t("contactUs")}</p>
+              <p onClick={openConsultationModal} className="footer__contactUs">
+                {t("contactUs")}
+              </p>
             </div>
             <div className="footer__left__bottom">
               © {new Date().getFullYear()} Kazakhstan
