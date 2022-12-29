@@ -258,16 +258,12 @@ $sectionMarginBottom: 2em;
     &__people {
       display: flex;
       overflow-x: auto;
-      column-gap: 3em;
+      column-gap: 2.5em;
       align-items: flex-start;
       padding-left: (100% - $width_section)/2;
       padding-right: (100% - $width_section)/2;
       padding-top: 10px;
       padding-bottom: 10px;
-
-      & > div {
-        width: 300px;
-      }
 
       /* Hide scrollbar for Chrome, Safari and Opera */
       // &::-webkit-scrollbar {
@@ -365,12 +361,9 @@ $sectionMarginBottom: 2em;
       &__people {
         padding-left: (100% - $width_section_laptop)/2;
         padding-right: (100% - $width_section_laptop)/2;
-
-        & > div {
-          width: 250px;
-        }
       }
     }
+
     .section__eight {
       margin-top: -1em;
 
@@ -455,10 +448,7 @@ $sectionMarginBottom: 2em;
       &__people {
         padding-left: (100% - $width_section_tablet)/2;
         padding-right: (100% - $width_section_tablet)/2;
-
-        & > div {
-          width: 220px;
-        }
+        column-gap: 2em;
       }
     }
 
@@ -582,10 +572,7 @@ $sectionMarginBottom: 2em;
       &__people {
         padding-left: (100% - $width_section_mobile)/2;
         padding-right: (100% - $width_section_mobile)/2;
-
-        & > div {
-          width: 200px;
-        }
+        column-gap: 1.5em;
       }
     }
 

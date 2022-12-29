@@ -21,7 +21,7 @@
   &__logo a {
     display: flex;
     align-items: center;
-    column-gap: .5em;
+    column-gap: 0.5em;
     color: #fff;
     font-weight: 700;
     font-size: 1.2em;
@@ -55,9 +55,6 @@
         font-weight: 700;
       }
     }
-  }
-  &__lang {
-    // background-color: red;
   }
 
   &__burgerMenu {

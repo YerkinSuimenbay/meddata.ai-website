@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import "./styles/global.scss";
 import Circle from "./components/loaders/Circle/Circle";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import "react-lazy-load-image-component/src/effects/opacity.css";
+// import "react-lazy-load-image-component/src/effects/black-and-white.css";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

@@ -3,7 +3,12 @@ import { Box, CircularProgress } from "@mui/material";
 
 const Circle = () => {
   return (
-    <Box p={2} textAlign="center">
+    <Box
+      sx={{ height: "calc(100vh - 70px)" }}
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+    >
       <CircularProgress />
     </Box>
   );

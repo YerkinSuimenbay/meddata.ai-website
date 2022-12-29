@@ -1,6 +1,5 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
 import "./person.scss";
 
 interface IProps {
@@ -24,8 +23,10 @@ const Person: React.FC<IProps> = ({
         <LazyLoadImage
           src={profile}
           alt={`profile of ${name}`}
-          placeholderSrc={profilePlaceholder}
-          effect="blur"
+          // placeholderSrc={profilePlaceholder}
+          // effect="blur"
+          // effect="black-and-white"
+          effect="opacity"
           width="100%"
           height="100%"
         />

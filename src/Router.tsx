@@ -18,7 +18,7 @@ function Router() {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Loadable = (Component: ElementType) => (props: any) =>
+export const Loadable = (Component: ElementType) => (props: any) =>
   (
     <Suspense fallback={<Circle />}>
       <Component {...props} />
